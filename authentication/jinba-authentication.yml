@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://docs.jinba.io/en/pages/toolbox/advanced/security and
+  https://docs.jinba.io/en/pages/toolbox/developer/api and
+  https://docs.jinba.io/en/pages/basics/api
+docs: https://docs.jinba.io/en/pages/toolbox/advanced/security
+summary:
+  types:
+  - http
+  http_schemes:
+  - bearer
+  api_key_prefix: jtb_
+  oauth2_flows: []
+description: >-
+  Jinba authenticates programmatic access with Bearer API keys. Jinba Toolbox
+  supports two methods: session-based auth (Better Auth session cookies) for the
+  admin web console, and organization-scoped API keys (jtb_ prefix) passed as a
+  Bearer token for the SDK, AI agents, and external integrations. Jinba Flow's
+  External API uses a per-flow Bearer API key that is auto-generated when a
+  workflow is published. There is no OAuth2 authorization flow and no documented
+  scope surface; access is governed by organization-level RBAC (Owner/Admin/
+  Member) and PostgreSQL row-level security tenant isolation.
+schemes:
+- name: toolbox-api-key
+  type: http
+  scheme: bearer
+  key_prefix: jtb_
+  scope: organization
+  header: 'Authorization: Bearer [example key]'
+  expiration: none by default (valid until manually deleted)
+  notes: >-
+    Keys are scoped to a single organization, track their issuer, record a
+    last-used timestamp, and creation/deletion is audit-logged.
+  sources:
+  - openapi/jinba-toolbox-openapi.yml
+  - https://docs.jinba.io/en/pages/toolbox/advanced/security
+- name: toolbox-session
+  type: session
+  mechanism: Better Auth session cookies
+  scope: web console (human users)
+  sources:
+  - https://docs.jinba.io/en/pages/toolbox/advanced/security
+- name: flow-api-key
+  type: http
+  scheme: bearer
+  scope: per published flow
+  header: 'Authorization: Bearer [example key]'
+  notes: Auto-generated on publish; regenerating invalidates the old key immediately.
+  sources:
+  - openapi/jinba-flow-openapi.yml
+  - https://docs.jinba.io/en/pages/basics/api
+rbac:
+  roles: [Owner, Admin, Member, super_admin]
+  isolation: organization-based; PostgreSQL Row Level Security enforces tenant isolation.
