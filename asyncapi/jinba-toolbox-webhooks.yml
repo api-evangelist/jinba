@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.jinba.io/en/pages/toolbox/developer/webhooks
+spec_type: Webhooks
+description: >-
+  Jinba Toolbox pushes real-time HTTP event notifications (webhooks) to a
+  registered URL. Webhooks are configured per organization and subscribe to one
+  or more event types. Payloads are JSON with an event/timestamp/data envelope
+  and are signed with HMAC-SHA256 (X-Webhook-Signature). No AsyncAPI document is
+  published by the provider; this captures the documented webhook catalog.
+delivery:
+  transport: HTTP POST to a consumer-registered URL
+  ack: endpoint must return 2xx
+  signature:
+    header: X-Webhook-Signature
+    algorithm: HMAC-SHA256 of the raw request body, "sha256=" prefix
+    secret: generated per webhook at creation
+  retry:
+    schedule: [1 minute, 5 minutes, 30 minutes]
+    on_failure: auto-disabled after 3 consecutive failures
+  dedupe: deliveries may arrive more than once; dedupe on runId or timestamp
+envelope:
+  fields: [event, timestamp, data]
+events:
+- name: tool.run.completed
+  description: A tool execution finished successfully.
+  data_fields: [runId, toolSetSlug, toolSlug, status, durationMs]
+- name: tool.run.failed
+  description: A tool execution failed.
+  data_fields: [runId, toolSetSlug, toolSlug, status, error, durationMs]
+- name: toolset.published
+  description: A new toolset version was published.
+  data_fields: [toolSetSlug, version, publishedBy, releaseNotes]
+- name: member.added
+  description: A new member was added to the organization.
+  data_fields: [userId, email, role]
+- name: member.removed
+  description: A member was removed from the organization.
+  data_fields: [userId]
+management_api:
+  list: GET /v1/orgs/:orgId/webhooks
+  create: POST /v1/orgs/:orgId/webhooks
+  update: PATCH /v1/orgs/:orgId/webhooks/:id
+  delete: DELETE /v1/orgs/:orgId/webhooks/:id
+  test: POST /v1/orgs/:orgId/webhooks/:id/test

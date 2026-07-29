@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.jinba.io/en/pages/toolbox/developer/api
+format: rfc9457
+description: >-
+  The Jinba Toolbox API returns errors as RFC 9457 Problem Details
+  (application/problem+json) with type, title, status, and detail. The table
+  below captures the documented status codes and the derived problem types per
+  operation family. Jinba Flow's External API uses a separate custom error
+  envelope (status/error{name,value,traceback}) rather than Problem Details.
+envelope:
+  toolbox:
+    media_type: application/problem+json
+    example:
+      type: https://toolbox-api.jinba.dev/errors/not-found
+      title: Not Found
+      status: 404
+      detail: "ToolSet 'unknown-toolset' not found in organization."
+  flow:
+    example:
+      status: failed
+      error:
+        name: ErrorType
+        value: Error message
+        traceback: Stack trace
+problems:
+- status: 400
+  type: https://toolbox-api.jinba.dev/errors/bad-request
+  title: Bad Request
+  detail: Invalid input or missing required fields.
+- status: 401
+  type: https://toolbox-api.jinba.dev/errors/unauthorized
+  title: Unauthorized
+  detail: Missing or invalid API key.
+- status: 403
+  type: https://toolbox-api.jinba.dev/errors/forbidden
+  title: Forbidden
+  detail: API key lacks permission for this action.
+- status: 404
+  type: https://toolbox-api.jinba.dev/errors/not-found
+  title: Not Found
+  detail: Resource does not exist.
+- status: 429
+  type: https://toolbox-api.jinba.dev/errors/too-many-requests
+  title: Too Many Requests
+  detail: Rate limit exceeded. Honor the Retry-After header and back off exponentially.
+sdk_errors:
+  class: JinbaTBError
+  fields: [statusCode, message, details]
+  note: The TypeScript SDK throws JinbaTBError for non-2xx responses; a 408 is
+    thrown when a request exceeds the configured timeout.

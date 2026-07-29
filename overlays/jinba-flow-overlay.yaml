@@ -1,0 +1,14 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Jinba Flow External API
+  version: 1.0.0
+extends: openapi/jinba-flow-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-rating: 3
+    x-apievangelist-conventions: conventions/jinba-conventions.yml
+    x-apievangelist-authentication: authentication/jinba-authentication.yml
+- target: $.paths['/api/v2/external/flows/{flowId}/published-run'].post
+  update:
+    x-execution-modes: [sync, async]

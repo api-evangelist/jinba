@@ -1,0 +1,22 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Jinba Toolbox API
+  version: 1.0.0
+extends: openapi/jinba-toolbox-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-rating: 4
+    x-apievangelist-conventions: conventions/jinba-conventions.yml
+    x-apievangelist-errors: errors/jinba-problem-types.yml
+    x-apievangelist-authentication: authentication/jinba-authentication.yml
+    x-apievangelist-webhooks: asyncapi/jinba-toolbox-webhooks.yml
+    x-apievangelist-mcp: mcp/jinba-mcp.yml
+- target: $.info
+  update:
+    x-standards:
+    - rfc9457-problem-details
+    - mcp
+    - json-schema
+    - semver
+    - soc2-type2

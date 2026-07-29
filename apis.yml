@@ -1,22 +1,400 @@
 aid: jinba
 name: Jinba
-description: Jinba is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Jinba is an enterprise-grade platform for building, running, and deploying
+  AI-powered workflows and agents using natural language. Business teams describe
+  a process in plain language, refine it in a visual graph editor or a YAML
+  manifest, and deploy it to production as an API or an MCP server. The product
+  spans Jinba Flow (the workflow builder), Jinba App / App Neo (the execution and
+  agent environment), and Jinba Toolbox (a centralized tool management and
+  execution platform for AI agents that runs tools in isolated E2B or Daytona
+  sandboxes). For developers, Jinba exposes two REST APIs — the Flow External API
+  for invoking published workflows synchronously or asynchronously, and the
+  Toolbox API for managing organizations, toolsets, tools, versions, runs,
+  webhooks, and API keys — plus a TypeScript SDK, native Model Context Protocol
+  (MCP) endpoints, webhooks with HMAC-signed payloads, and RFC 9457 error
+  semantics. Jinba is SOC 2 Type 2 audited, supports SSO and RBAC, and offers
+  on-premises or private-cloud (AWS/GCP/Azure) deployment. Founded by Shoya
+  Matsumori and Takuya Norisugi; Y Combinator (Winter 2026).
 url: https://raw.githubusercontent.com/api-evangelist/jinba/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://jinba.io/favicon.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-developer-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- AI
+- Agents
+- Workflow Automation
+- Enterprise
+- MCP
+- Low-Code
+- Developer Tools
+- Tools
+- Automation
+apis:
+- aid: jinba:jinba-api-keys-api
+  name: Jinba API Keys API
+  description: The API Keys API from Jinba — 2 operation(s) for api keys.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - API Keys
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-api-keys-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-credits-api
+  name: Jinba Credits API
+  description: The Credits API from Jinba — 1 operation(s) for credits.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Credits
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-credits-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-execution-api
+  name: Jinba Execution API
+  description: The Execution API from Jinba — 2 operation(s) for execution.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Execution
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-execution-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-explore-api
+  name: Jinba Explore API
+  description: The Explore API from Jinba — 2 operation(s) for explore.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Explore
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-explore-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-flows-api
+  name: Jinba Flows API
+  description: The Flows API from Jinba — 1 operation(s) for flows.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Flows
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-flows-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-mcp-api
+  name: Jinba MCP API
+  description: The MCP API from Jinba — 2 operation(s) for mcp.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - MCP
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-mcp-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-members-api
+  name: Jinba Members API
+  description: The Members API from Jinba — 1 operation(s) for members.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Members
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-members-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-organizations-api
+  name: Jinba Organizations API
+  description: The Organizations API from Jinba — 2 operation(s) for organizations.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-organizations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-public-api
+  name: Jinba Public API
+  description: The Public API from Jinba — 2 operation(s) for public.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Public
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-public-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-runs-api
+  name: Jinba Runs API
+  description: The Runs API from Jinba — 2 operation(s) for runs.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Runs
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-runs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-tools-api
+  name: Jinba Tools API
+  description: The Tools API from Jinba — 2 operation(s) for tools.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Tools
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-tools-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-toolsets-api
+  name: Jinba ToolSets API
+  description: The ToolSets API from Jinba — 2 operation(s) for toolsets.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - ToolSets
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-toolsets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-versions-api
+  name: Jinba Versions API
+  description: The Versions API from Jinba — 3 operation(s) for versions.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-versions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-webhooks-api
+  name: Jinba Webhooks API
+  description: The Webhooks API from Jinba — 3 operation(s) for webhooks.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+common:
+- url: https://jinba.io
+  type: DeveloperPortal
+- url: https://docs.jinba.io/en/introduction
+  type: Documentation
+- url: https://docs.jinba.io/en/pages/basics/quickstart
+  type: GettingStarted
+- url: https://www.jinba.io/pricing
+  type: Pricing
+- url: https://app.jinba.io
+  type: SignUp
+- url: https://www.jinba.io/terms
+  type: TermsOfService
+- url: https://www.jinba.io/privacy
+  type: PrivacyPolicy
+- url: https://www.jinba.io/blog
+  type: Blog
+- url: https://www.jinba.io/contact-sales
+  type: Support
+- url: https://status.jinba.io
+  type: StatusPage
+- url: https://x.com/jinbaflow
+  type: Twitter
+- url: https://www.linkedin.com/company/jinba
+  type: LinkedIn
+- url: llms/jinba-llms.txt
+  type: LLMsTxt
+- url: mcp/jinba-mcp.yml
+  type: MCPServer
+- url: authentication/jinba-authentication.yml
+  type: Authentication
+- url: conventions/jinba-conventions.yml
+  type: Conventions
+- url: errors/jinba-problem-types.yml
+  type: ErrorCatalog
+- url: lifecycle/jinba-lifecycle.yml
+  type: Lifecycle
+- url: packages/jinba-packages.yml
+  type: Packages
+- url: packages/jinba-packages.yml
+  type: SDKs
+- url: conformance/jinba-conformance.yml
+  type: Conformance
+- url: https://docs.jinba.io/en/pages/security/index
+  type: Compliance
+- url: security/jinba-domain-security.yml
+  type: DomainSecurity
+- url: asyncapi/jinba-toolbox-webhooks.yml
+  type: Webhooks
+- url: data-model/jinba-data-model.yml
+  type: DataModel
+- url: agentic-access/jinba-agentic-access.yml
+  type: AgenticAccess
+- url: skills/_index.yml
+  type: AgentSkill
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+- name: Jinba
+  url: https://jinba.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

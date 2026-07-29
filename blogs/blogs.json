@@ -1,0 +1,11 @@
+{
+  "repo": "jinba",
+  "feeds": [
+    {
+      "source": "https://www.jinba.io/blog",
+      "error": "URLError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

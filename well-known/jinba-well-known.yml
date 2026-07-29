@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Jinba hosts on 2026-07-19
+description: >-
+  Probe of the /.well-known/ discovery surface across Jinba's website and API
+  hosts. No well-known documents were found — all probed paths returned 404
+  (docs.jinba.io did not resolve from the harvest environment). Recorded as
+  honest absence; no WellKnown/SecurityTxt rating pointer is asserted.
+hosts:
+- host: https://jinba.io
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://api.jinba.dev
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://toolbox-api.jinba.dev
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}

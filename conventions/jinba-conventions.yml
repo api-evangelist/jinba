@@ -1,0 +1,86 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://docs.jinba.io/en/pages/toolbox/developer/api,
+  https://docs.jinba.io/en/pages/toolbox/developer/webhooks,
+  https://docs.jinba.io/en/pages/basics/api
+description: >-
+  Cross-cutting request/response conventions that apply across Jinba's REST APIs
+  (Toolbox API and Flow External API): authentication, error envelope, rate-limit
+  signaling, request tracing, versioning, execution modes, and webhook delivery.
+base_urls:
+  toolbox: https://toolbox-api.jinba.dev/v1
+  flow: https://api.jinba.dev
+api_style: REST over HTTPS, JSON request/response
+
+authentication:
+  scheme: Bearer API key
+  toolbox_key_prefix: jtb_
+  scope: organization (Toolbox) / per-flow (Flow)
+  detail: authentication/jinba-authentication.yml
+
+idempotency:
+  supported: false
+  api_key_header: null
+  note: >-
+    Jinba does not document an Idempotency-Key request header on either REST API.
+    The webhooks guide recommends that CONSUMERS process deliveries idempotently
+    (deduplicating on runId or event timestamp because deliveries may be retried),
+    but this is consumer-side guidance, not a server-side idempotency-key
+    contract. No Idempotency rating pointer is asserted.
+
+pagination:
+  documented: false
+  note: List endpoints (toolsets, tools, versions, runs, webhooks, api-keys) are
+    documented without explicit pagination parameters in the public reference.
+
+versioning:
+  toolbox:
+    scheme: uri-path
+    current: v1
+  flow:
+    scheme: uri-path
+    current: v2
+    path: /api/v2/external/flows/{flowId}/published-run
+  toolset_versions:
+    scheme: semver
+    detail: >-
+      Toolsets are published as immutable semantic versions; run requests may pin
+      a specific version for reproducibility, and a published-version pointer
+      selects the active version.
+  detail: lifecycle/jinba-lifecycle.yml
+
+execution_modes:
+  flow:
+    modes: [sync, async]
+    field: mode
+    sync: Blocks until the workflow completes and returns the result.
+    async: Returns immediately with a run id; poll status later.
+  toolbox:
+    run: Execute the published version of a tool.
+    test: Execute draft code without publishing.
+
+request_tracing:
+  run_id: >-
+    Executions return a runId (e.g. run_abc123) that identifies the run in run
+    history and in webhook payloads.
+
+error_envelope:
+  toolbox:
+    format: rfc9457
+    media_type: application/problem+json
+    fields: [type, title, status, detail]
+    detail: errors/jinba-problem-types.yml
+  flow:
+    format: custom
+    fields: ['status', 'error{name,value,traceback}', 'stepOutputs']
+
+rate_limiting:
+  signal: HTTP 429 Too Many Requests
+  retry_after_header: true
+  guidance: Implement exponential backoff on 429 and transient failures.
+
+webhooks:
+  detail: asyncapi/jinba-toolbox-webhooks.yml
+  signature: 'X-Webhook-Signature (HMAC-SHA256 of the raw body, sha256= prefix)'
+  retry: '1 minute, 5 minutes, 30 minutes; auto-disabled after 3 failures'

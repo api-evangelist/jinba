@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://docs.jinba.io/en/pages/toolbox/advanced/versioning,
+  https://docs.jinba.io/en/pages/basics/api, https://status.jinba.io
+description: >-
+  Versioning, publishing, and operational-transparency posture for Jinba. The
+  Toolbox API is versioned in the URI path (/v1) and the Flow External API in the
+  path (/api/v2). Toolsets themselves are published as immutable semantic
+  versions. No formal deprecation/sunset policy (RFC 8594) is published.
+versioning:
+  toolbox_api:
+    scheme: uri-path
+    current: v1
+  flow_api:
+    scheme: uri-path
+    current: v2
+  toolset_versions:
+    scheme: semver
+    immutable: true
+    detail: >-
+      Publishing creates a new immutable semantic version; a separate
+      published-version pointer selects the active version, and run requests can
+      pin a version for reproducibility.
+    docs: https://docs.jinba.io/en/pages/toolbox/advanced/versioning
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No documented deprecation/sunset policy or RFC 8594 header support.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.jinba.io
+deprecated_operations: []

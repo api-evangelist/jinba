@@ -1,0 +1,40 @@
+{
+  "provider": "jinba",
+  "sources": [
+    "jinba-api-keys-api-openapi.yml",
+    "jinba-credits-api-openapi.yml",
+    "jinba-execution-api-openapi.yml",
+    "jinba-explore-api-openapi.yml",
+    "jinba-flows-api-openapi.yml",
+    "jinba-mcp-api-openapi.yml",
+    "jinba-members-api-openapi.yml",
+    "jinba-organizations-api-openapi.yml",
+    "jinba-public-api-openapi.yml",
+    "jinba-runs-api-openapi.yml",
+    "jinba-tools-api-openapi.yml",
+    "jinba-toolsets-api-openapi.yml",
+    "jinba-versions-api-openapi.yml",
+    "jinba-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "jinba-api-keys-api-openapi.yml",
+    "jinba-credits-api-openapi.yml",
+    "jinba-execution-api-openapi.yml",
+    "jinba-explore-api-openapi.yml",
+    "jinba-flows-api-openapi.yml",
+    "jinba-mcp-api-openapi.yml",
+    "jinba-members-api-openapi.yml",
+    "jinba-organizations-api-openapi.yml",
+    "jinba-public-api-openapi.yml",
+    "jinba-runs-api-openapi.yml",
+    "jinba-tools-api-openapi.yml",
+    "jinba-toolsets-api-openapi.yml",
+    "jinba-versions-api-openapi.yml",
+    "jinba-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

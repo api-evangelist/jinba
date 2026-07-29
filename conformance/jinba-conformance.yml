@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://docs.jinba.io/en/pages/security/index,
+  https://docs.jinba.io/en/pages/toolbox/developer/api,
+  https://docs.jinba.io/en/pages/toolbox/developer/mcp
+description: >-
+  Industry / cross-cutting standards Jinba conforms to, from published claims and
+  from the documented API behavior. SOC 2 Type 2 is an explicitly published,
+  completed audit (feeds the Compliance rating pointer).
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: "Security docs state: 'The SOC 2 Type 2 audit has been completed.'"
+  source: https://docs.jinba.io/en/pages/security/index
+- id: rfc9457-problem-details
+  conforms: true
+  evidence: Toolbox API errors use application/problem+json with type/title/status/detail.
+- id: mcp
+  conforms: true
+  evidence: Native Model Context Protocol endpoints (JSON-RPC, tools/list, tools/call).
+- id: json-schema
+  conforms: true
+  evidence: Tools declare inputSchema/outputSchema as JSON Schema; input JSON validated against schema.
+- id: semver
+  conforms: true
+  evidence: Toolsets are published as immutable semantic versions.
+- id: tls
+  conforms: true
+  evidence: TLS termination at ALB; probed TLSv1.3 on api.jinba.dev and toolbox-api.jinba.dev.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth2 authorization flow; Bearer API-key auth only.
+- id: hmac-webhook-signatures
+  conforms: true
+  evidence: Webhook payloads signed with HMAC-SHA256 via X-Webhook-Signature header.
+compliance_program:
+  soc2_type2: completed
+  vulnerability_assessments: at least once per year
+  log_retention: at least six months
+  encryption: TLS in transit; virtualization-based tenant isolation
+  page: https://docs.jinba.io/en/pages/security/index

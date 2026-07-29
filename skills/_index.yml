@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: generated
+source: >-
+  Generated from openapi/jinba-toolbox-openapi.yml and
+  openapi/jinba-flow-openapi.yml + conventions/ + errors/ + authentication/.
+  Every operationId referenced is verified present in the specs.
+skills:
+- file: jinba-execute-tool.md
+  name: Execute a Jinba Toolbox tool
+  api: openapi/jinba-toolbox-openapi.yml
+  operations: [listToolSets, listTools, runTool, getRun]
+- file: jinba-publish-toolset-version.md
+  name: Create and publish a Jinba toolset version
+  api: openapi/jinba-toolbox-openapi.yml
+  operations: [createToolSet, createTool, testTool, publishVersion, setPublishedVersion]
+- file: jinba-setup-webhook.md
+  name: Register and verify a Jinba Toolbox webhook
+  api: openapi/jinba-toolbox-openapi.yml
+  operations: [createWebhook, testWebhook, listWebhooks]
+- file: jinba-run-published-flow.md
+  name: Run a published Jinba Flow workflow
+  api: openapi/jinba-flow-openapi.yml
+  operations: [runPublishedFlow]

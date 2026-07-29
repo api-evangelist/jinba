@@ -1,0 +1,86 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  openapi/jinba-toolbox-openapi.yml, enriched from
+  https://docs.jinba.io/en/pages/toolbox/advanced/security
+description: >-
+  Entity-relationship graph for Jinba Toolbox, derived from the REST API/SDK
+  object schemas and the documented data model (RLS-protected tables). Everything
+  is scoped to an Organization (tenant).
+entities:
+- name: Organization
+  id_field: id
+  is_tenant: true
+  fields: [id, slug, name, role, createdAt]
+- name: ToolSet
+  id_field: id
+  slug: slug
+  fields: [id, organizationId, slug, name, description, sandbox, visibility, mcpEnabled, tags, latestVersion, publishedVersion]
+- name: Tool
+  id_field: id
+  slug: slug
+  fields: [id, toolSetId, slug, name, description, inputSchema, outputSchema, code, entrypoint]
+- name: ToolSetVersion
+  id_field: version
+  fields: [version, releaseNotes, toolSetSlug, publishedBy, createdAt]
+- name: Run
+  id_field: runId
+  fields: [runId, toolSetSlug, toolSlug, status, durationMs, createdAt]
+- name: ApiKey
+  id_field: id
+  fields: [id, name, prefix, issuedBy, lastUsedAt, createdAt]
+- name: Webhook
+  id_field: id
+  fields: [id, orgId, url, events, secret, enabled, createdAt]
+- name: Member
+  id_field: userId
+  fields: [userId, email, role]
+- name: AuditLog
+  id_field: id
+  fields: [id, orgId, userId, action, targetType, targetId, details, ipAddress, createdAt]
+relationships:
+- from: ToolSet
+  to: Organization
+  kind: belongs_to
+  via: organizationId
+- from: Tool
+  to: ToolSet
+  kind: belongs_to
+  via: toolSetId
+- from: ToolSet
+  to: Tool
+  kind: has_many
+  via: toolSetId
+- from: ToolSetVersion
+  to: ToolSet
+  kind: belongs_to
+  via: toolSetSlug
+- from: Run
+  to: Tool
+  kind: belongs_to
+  via: toolSlug
+- from: Run
+  to: ToolSet
+  kind: belongs_to
+  via: toolSetSlug
+- from: ApiKey
+  to: Organization
+  kind: belongs_to
+  via: (org-scoped)
+- from: Webhook
+  to: Organization
+  kind: belongs_to
+  via: orgId
+- from: Member
+  to: Organization
+  kind: belongs_to
+  via: (org-scoped)
+- from: AuditLog
+  to: Organization
+  kind: belongs_to
+  via: orgId
+id_conventions:
+  Run: run_ prefix (e.g. run_abc123)
+  Member/User: user_ prefix (e.g. user_abc123)
+  ApiKey: jtb_ prefix (Bearer key value)
+  Organization: org_ prefix (e.g. org_abc123)

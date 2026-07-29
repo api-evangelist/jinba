@@ -1,0 +1,196 @@
+# jinba
+
+## Docs
+
+- [What is Jinba?](https://docs.jinba.io/en/introduction.md): Build, run, and deploy AI-powered workflows with natural language
+- [Execution Model](https://docs.jinba.io/en/pages/architecture/execution-model.md): How workflows execute from trigger to completion
+- [System Architecture](https://docs.jinba.io/en/pages/architecture/system-architecture.md): How Jinba Flow components work together
+- [API](https://docs.jinba.io/en/pages/basics/api.md): Learn how to call your published workflows via API
+- [Archive Feature](https://docs.jinba.io/en/pages/basics/archive.md): How to archive and restore flows
+- [Method 1: Chat Panel](https://docs.jinba.io/en/pages/basics/chat.md): Create flows using the Jinba Copilot through natural language conversation. If you need help creating or editing your flow, you can use the Jinba Copilot to help. It can help you make edits based on your conversation, and if tools require you to set up API keys or credentials from other services, it…
+- [Core Concepts](https://docs.jinba.io/en/pages/basics/core-concepts.md): Essential terminology and concepts for understanding Jinba Flow
+- [Credit Costs](https://docs.jinba.io/en/pages/basics/credit-costs.md): Understand the credit costs for different tools in Jinba Flow
+- [Debug](https://docs.jinba.io/en/pages/basics/debug.md): Learn how to debug your workflows and troubleshoot issues
+- [Method 2: Graph Editor (Drag & Drop)](https://docs.jinba.io/en/pages/basics/drag_and_drop.md): Create flows using the visual drag-and-drop graph editor with pre-built modules. Click on the + icon in the graph view of the editor in order to see a full list of our available tools. By clicking on the created node, you can see the inputs and configuration needed for it and create basic flows in t…
+- [History and Versions](https://docs.jinba.io/en/pages/basics/history-versions.md): Learn about workflow version history and execution history
+- [Knowledge](https://docs.jinba.io/en/pages/basics/knowledge.md): Learn about knowledge bases, vector search, and how to build RAG systems
+- [Method 3: YAML Coding Panel](https://docs.jinba.io/en/pages/basics/manifest.md): Write manifests directly in YAML format for complete control over your flows. A manifest in your site defines the execution flow of tools and scripts, specifying dependencies and data transformations. This document outlines how to structure and write a manifest following the format used in your syst…
+- [Model Context Protocol](https://docs.jinba.io/en/pages/basics/mcp.md): Learn how to set up your workspace MCP server.
+- [Overview](https://docs.jinba.io/en/pages/basics/overview.md): Jinba Flow provides three different interfaces for creating workflows. By utilizing the characteristics of each interface appropriately, you can build workflows exactly as you envision.
+- [Publish](https://docs.jinba.io/en/pages/basics/publish.md): Learn how to publish your workflows and make them available via API or MCP
+- [Quickstart](https://docs.jinba.io/en/pages/basics/quickstart.md): Create and run your first workflow in 10 minutes
+- [Scheduling](https://docs.jinba.io/en/pages/basics/scheduling.md): Learn how to schedule workflows to run automatically
+- [Step Module Options](https://docs.jinba.io/en/pages/basics/step-options.md): Learn how to use advanced step options like loops (forEach), conditions (when), and dependencies (needs) in your workflows
+- [Variables & Templates](https://docs.jinba.io/en/pages/basics/variables.md): Learn how to use variable placeholders and Jinja2 templates to create dynamic workflows
+- [What is Jinba Flow?](https://docs.jinba.io/en/pages/basics/what-is-jinba-flow.md): A product for designing and building workflows
+- [Workspace](https://docs.jinba.io/en/pages/basics/workspace.md): Learn about workspaces in Jinba Flow and how to manage them
+- [Anthropic Credentials](https://docs.jinba.io/en/pages/credentials/anthropic.md)
+- [Chatwork Credentials](https://docs.jinba.io/en/pages/credentials/chatwork.md)
+- [Communication Platforms](https://docs.jinba.io/en/pages/credentials/communication-platforms.md)
+- [Discord Credentials](https://docs.jinba.io/en/pages/credentials/discord.md)
+- [E-commerce Platforms](https://docs.jinba.io/en/pages/credentials/ecommerce-platforms.md)
+- [Gemini Credentials](https://docs.jinba.io/en/pages/credentials/gemini.md)
+- [GitHub Credentials](https://docs.jinba.io/en/pages/credentials/github.md)
+- [Google OAuth Credentials](https://docs.jinba.io/en/pages/credentials/google-oauth.md)
+- [Grok Credentials](https://docs.jinba.io/en/pages/credentials/grok.md)
+- [Overview](https://docs.jinba.io/en/pages/credentials/index.md): Configure API keys and OAuth connections for external services
+- [Intercom Credentials](https://docs.jinba.io/en/pages/credentials/intercom.md): Set up Intercom credentials for messaging and customer events
+- [Kling Credentials](https://docs.jinba.io/en/pages/credentials/kling.md)
+- [LINE Credentials](https://docs.jinba.io/en/pages/credentials/line.md)
+- [Llama Credentials](https://docs.jinba.io/en/pages/credentials/llama.md)
+- [Luma Credentials](https://docs.jinba.io/en/pages/credentials/luma.md)
+- [Netsea Credentials](https://docs.jinba.io/en/pages/credentials/netsea.md)
+- [Notion Credentials](https://docs.jinba.io/en/pages/credentials/notion.md)
+- [OpenAI Credentials](https://docs.jinba.io/en/pages/credentials/openai.md)
+- [Productivity Tools](https://docs.jinba.io/en/pages/credentials/productivity-tools.md)
+- [Shopify Credentials](https://docs.jinba.io/en/pages/credentials/shopify.md)
+- [Slack Credentials](https://docs.jinba.io/en/pages/credentials/slack.md)
+- [Twilio Credentials](https://docs.jinba.io/en/pages/credentials/twilio.md): Set up Twilio credentials for SMS and WhatsApp integrations
+- [Overview](https://docs.jinba.io/en/pages/enterprise/index.md): Learn about enterprise features available in Jinba Flow
+- [Organizations & Member Invitations](https://docs.jinba.io/en/pages/enterprise/organization.md): The user journey from inviting a member to an organization to them joining it
+- [Logout](https://docs.jinba.io/en/pages/jinba_app/account/logout.md): How to log out of Jinba App
+- [Theme Settings](https://docs.jinba.io/en/pages/jinba_app/account/theme.md): Change the display theme (light/dark)
+- [Agent Builder](https://docs.jinba.io/en/pages/jinba_app/agents/agent-builder.md): How to create and edit agents
+- [Agent Details](https://docs.jinba.io/en/pages/jinba_app/agents/agent-detail.md): Viewing detailed agent information
+- [Agent List](https://docs.jinba.io/en/pages/jinba_app/agents/agent-list.md): Searching, duplicating, editing, and deleting agents
+- [Agent Management Overview](https://docs.jinba.io/en/pages/jinba_app/agents/overview.md): Screen layout and basic features of Agent Management
+- [Publishing Agents](https://docs.jinba.io/en/pages/jinba_app/agents/publish.md): Agent publishing settings and app execution
+- [Login](https://docs.jinba.io/en/pages/jinba_app/basics/login.md): How to log in to Jinba App
+- [Navigation](https://docs.jinba.io/en/pages/jinba_app/basics/navigation.md): Screen layout and navigation in Jinba App
+- [File Attachments](https://docs.jinba.io/en/pages/jinba_app/chat/file-attachment.md): How to attach files in chat for AI to process
+- [Chat Overview](https://docs.jinba.io/en/pages/jinba_app/chat/overview.md): Overview and screen layout of Jinba App chat feature
+- [Receiving AI Responses](https://docs.jinba.io/en/pages/jinba_app/chat/receive-response.md): Display formats and how to review AI responses
+- [Sending Messages to AI](https://docs.jinba.io/en/pages/jinba_app/chat/send-message.md): How to send messages to AI in chat
+- [Using Connectors](https://docs.jinba.io/en/pages/jinba_app/chat/use-connectors.md): How to use connectors in chat to integrate with external services
+- [Form Execution](https://docs.jinba.io/en/pages/jinba_app/connectors/form-execution.md): Execute connector tools individually using forms
+- [Jinba Flow Connectors](https://docs.jinba.io/en/pages/jinba_app/connectors/jinbaflow.md): Connecting, installing, and managing Jinba Flow connectors
+- [Managing Connectors](https://docs.jinba.io/en/pages/jinba_app/connectors/manage-connectors.md): Re-fetching, uninstalling, and renaming connectors
+- [Marketplace](https://docs.jinba.io/en/pages/jinba_app/connectors/marketplace.md): List and installation of standard MCPs
+- [My Connectors](https://docs.jinba.io/en/pages/jinba_app/connectors/my-connectors.md): List and management of installed connectors
+- [Connector Management Overview](https://docs.jinba.io/en/pages/jinba_app/connectors/overview.md): Screen layout and basic features of Connector Management
+- [Core Concepts](https://docs.jinba.io/en/pages/jinba_app/core-concepts.md): Basic terminology for understanding Jinba App
+- [FAQ](https://docs.jinba.io/en/pages/jinba_app/faq.md): Frequently asked questions and answers about Jinba App
+- [Introduction](https://docs.jinba.io/en/pages/jinba_app/introduction.md): Welcome to the official Jinba App documentation
+- [Quick Start](https://docs.jinba.io/en/pages/jinba_app/quickstart.md): Basic steps to get started with Jinba App
+- [Creating Tasks](https://docs.jinba.io/en/pages/jinba_app/tasks/create-task.md): How to create new tasks
+- [Draft Management](https://docs.jinba.io/en/pages/jinba_app/tasks/draft-management.md): Saving and editing task drafts
+- [Task Management Overview](https://docs.jinba.io/en/pages/jinba_app/tasks/overview.md): Screen layout and basic features of Task Management
+- [Scheduled Execution](https://docs.jinba.io/en/pages/jinba_app/tasks/schedule-execution.md): Setting task execution times and automatic execution
+- [Attach resources](https://docs.jinba.io/en/pages/jinba_app_neo/agents/attach.md): How to attach skills, connectors, and knowledge to an agent
+- [Create an agent](https://docs.jinba.io/en/pages/jinba_app_neo/agents/create.md): How to create a new agent and what each setting does
+- [Operate and manage agents](https://docs.jinba.io/en/pages/jinba_app_neo/agents/manage.md): Version history, archiving, and deletion
+- [Agent memory](https://docs.jinba.io/en/pages/jinba_app_neo/agents/memory.md): How agents learn from conversations, and how to manage what they learn
+- [Agents overview](https://docs.jinba.io/en/pages/jinba_app_neo/agents/overview.md): What agents are and how to use them by purpose
+- [Share an agent](https://docs.jinba.io/en/pages/jinba_app_neo/agents/sharing.md): Configuring sharing scope and permissions
+- [AI Activity and the Workspace Panel](https://docs.jinba.io/en/pages/jinba_app_neo/chat/agent-activity.md): How to read the AI run status and review outputs, code, terminal output, and plans
+- [Composing Messages and Attachments](https://docs.jinba.io/en/pages/jinba_app_neo/chat/composer.md): Using the composer — sending, reference pickers, file attachments, and response quality
+- [In-Chat Forms and Suggestions](https://docs.jinba.io/en/pages/jinba_app_neo/chat/interactive-cards.md): Flow input forms, multiple-choice questions, Jinba integration cards, and skill suggestions
+- [Managing and Searching Chats](https://docs.jinba.io/en/pages/jinba_app_neo/chat/manage-chats.md): Pinning, renaming, deleting, cross-chat search, and in-chat search
+- [Chat Overview](https://docs.jinba.io/en/pages/jinba_app_neo/chat/overview.md): An overview of chat in Jinba App Neo
+- [Connect a Custom MCP](https://docs.jinba.io/en/pages/jinba_app_neo/connectors/custom-mcp.md): How to register any MCP server, and what to watch out for
+- [jinba-flow Integration](https://docs.jinba.io/en/pages/jinba_app_neo/connectors/jinba-flow.md): Using workflows as tools, the Flow run console, and personal integration
+- [Connectors Overview](https://docs.jinba.io/en/pages/jinba_app_neo/connectors/overview.md): The external service connections that extend what the AI can do
+- [Personal Connectors (Gmail, Slack, and more)](https://docs.jinba.io/en/pages/jinba_app_neo/connectors/personal-connectors.md): Connect your own accounts and let the AI act on your behalf
+- [Core Concepts](https://docs.jinba.io/en/pages/jinba_app_neo/core-concepts.md): The basic concepts that make up Jinba App Neo
+- [FAQ](https://docs.jinba.io/en/pages/jinba_app_neo/faq.md): Frequently asked questions about Jinba App Neo
+- [Introduction](https://docs.jinba.io/en/pages/jinba_app_neo/introduction.md): Welcome to the official documentation for Jinba App Neo (Beta)
+- [Add sources](https://docs.jinba.io/en/pages/jinba_app_neo/knowledge/add-sources.md): Registering from files, URLs, Notion, and Google Drive
+- [Organize with folders](https://docs.jinba.io/en/pages/jinba_app_neo/knowledge/organize.md): Folder hierarchy, auto-sync, and the auto-load limit
+- [Knowledge overview](https://docs.jinba.io/en/pages/jinba_app_neo/knowledge/overview.md): How knowledge — the material the AI reads and references — works
+- [Quickstart](https://docs.jinba.io/en/pages/jinba_app_neo/quickstart.md): The fastest way to get started with Jinba App Neo
+- [Account Settings](https://docs.jinba.io/en/pages/jinba_app_neo/settings/account.md): Profile, your custom instructions, and organization usage
+- [Appearance Settings](https://docs.jinba.io/en/pages/jinba_app_neo/settings/appearance.md): Theme, language, and text size
+- [Memory](https://docs.jinba.io/en/pages/jinba_app_neo/settings/memory.md): How the AI learns about you, and how to manage what it learns
+- [Workspace Settings](https://docs.jinba.io/en/pages/jinba_app_neo/settings/workspace.md): Workspace info, default model, member management, plan, and the danger zone
+- [Create and Edit Skills](https://docs.jinba.io/en/pages/jinba_app_neo/skills/create.md): Using the skill editor — writing by hand, auto-generating, and importing
+- [Create Skills from Chat](https://docs.jinba.io/en/pages/jinba_app_neo/skills/from-chat.md): How the AI suggests turning procedures established in conversation into Skills — and keeping them up to date
+- [Skills Overview](https://docs.jinba.io/en/pages/jinba_app_neo/skills/overview.md): How skills — reusable playbooks and instructions for the AI — work
+- [Tasks](https://docs.jinba.io/en/pages/jinba_app_neo/tasks/overview.md): Scheduled runs — hand recurring and one-shot work to the AI
+- [Security](https://docs.jinba.io/en/pages/security/index.md): Security policies and controls for Jinba Flow
+- [Sandbox Providers](https://docs.jinba.io/en/pages/toolbox/advanced/sandbox.md): Learn about the provider-agnostic sandbox architecture and how to configure E2B and Daytona execution environments
+- [Security & Access Control](https://docs.jinba.io/en/pages/toolbox/advanced/security.md): Understand RBAC, authentication methods, and organization-based isolation in Jinba Toolbox
+- [Versioning & Publishing](https://docs.jinba.io/en/pages/toolbox/advanced/versioning.md): Understand how Jinba Toolbox manages immutable toolset versions with semantic versioning
+- [API Key Management](https://docs.jinba.io/en/pages/toolbox/console/api-keys.md): Create, view, and revoke API keys for authenticating with the Jinba Toolbox API
+- [Execution & Testing](https://docs.jinba.io/en/pages/toolbox/console/execution.md): Run tools in sandbox environments, view execution results, and browse run history in the Jinba Toolbox console
+- [Organization Management](https://docs.jinba.io/en/pages/toolbox/console/organization.md): Create and manage organizations, invite members, and assign roles in the Jinba Toolbox console
+- [Tool Development](https://docs.jinba.io/en/pages/toolbox/console/tool-development.md): Write tools with the Monaco code editor, define input/output schemas, and use AI Copilot for code generation in the Jinba Toolbox console
+- [ToolSet Management](https://docs.jinba.io/en/pages/toolbox/console/toolsets.md): Create ToolSets, configure sandbox environments, manage packages, and control visibility in the Jinba Toolbox console
+- [Core Concepts](https://docs.jinba.io/en/pages/toolbox/core-concepts.md): Essential terminology and domain model for understanding Jinba Toolbox
+- [REST API](https://docs.jinba.io/en/pages/toolbox/developer/api.md): Interact with Jinba Toolbox programmatically through the REST API
+- [MCP Integration](https://docs.jinba.io/en/pages/toolbox/developer/mcp.md): Connect AI agents to Jinba Toolbox via the Model Context Protocol (MCP)
+- [SDK](https://docs.jinba.io/en/pages/toolbox/developer/sdk.md): Use the @jinba-toolbox/sdk package to interact with Jinba Toolbox from TypeScript and JavaScript applications
+- [Webhooks](https://docs.jinba.io/en/pages/toolbox/developer/webhooks.md): Receive real-time event notifications from Jinba Toolbox via webhooks
+- [Quickstart](https://docs.jinba.io/en/pages/toolbox/quickstart.md): Create your first ToolSet and execute a tool in minutes
+- [What is Jinba Toolbox?](https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox.md): A centralized tool management and execution platform for AI agents
+- [Anthropic](https://docs.jinba.io/en/pages/tools/ai/anthropic.md): Invoke responses from Claude
+- [Gemini](https://docs.jinba.io/en/pages/tools/ai/gemini.md): Invoke responses from Gemini
+- [Gemini with File](https://docs.jinba.io/en/pages/tools/ai/gemini_with_file.md): Use Gemini to generate text with files (PDF, image, audio, video, etc.)
+- [Grok](https://docs.jinba.io/en/pages/tools/ai/grok.md): Invoke responses from Grok
+- [LlamaCloud](https://docs.jinba.io/en/pages/tools/ai/llama_cloud.md): Advanced document processing and search with LlamaCloud
+- [LlamaCloud Advanced Features](https://docs.jinba.io/en/pages/tools/ai/llama_cloud_advanced.md): Advanced search and query capabilities with LlamaCloud and LlamaIndex integration
+- [OpenAI](https://docs.jinba.io/en/pages/tools/ai/openai.md): Invoke responses from OpenAI models
+- [Firecrawl Module](https://docs.jinba.io/en/pages/tools/cms/firecrawl.md): Automate web crawling and data collection
+- [Wordpress](https://docs.jinba.io/en/pages/tools/cms/wordpress.md): Make a new article on Wordpress
+- [ChatWork Advanced](https://docs.jinba.io/en/pages/tools/communication/chatwork_advanced.md): Advanced ChatWork messaging and task management tools
+- [Discord](https://docs.jinba.io/en/pages/tools/communication/discord.md): Integrate with a Discord Bot
+- [Faximo FAX Service](https://docs.jinba.io/en/pages/tools/communication/faximo.md): Send FAX messages and search FAX history using Faximo service
+- [Gmail](https://docs.jinba.io/en/pages/tools/communication/gmail.md): Email operations using Gmail API
+- [Intercom](https://docs.jinba.io/en/pages/tools/communication/intercom.md): Create contacts, send messages, track events, and fetch conversations in Intercom
+- [LINE](https://docs.jinba.io/en/pages/tools/communication/line.md): LINE messaging platform tools for sending messages, broadcasting, and retrieving user data
+- [Slack](https://docs.jinba.io/en/pages/tools/communication/slack.md): Slack messaging business platform tools
+- [Twilio](https://docs.jinba.io/en/pages/tools/communication/twilio.md): Send SMS, MMS, WhatsApp messages, and make voice calls via Twilio API
+- [X (Twitter)](https://docs.jinba.io/en/pages/tools/communication/x.md): Interact with X (Twitter) API - post tweets, get user profiles, and search tweets
+- [Snowflake](https://docs.jinba.io/en/pages/tools/database/snowflake.md): Run queries on Snowflake
+- [Document Processing](https://docs.jinba.io/en/pages/tools/files/document_processing.md): Extract and process text from various document formats
+- [Extract from File](https://docs.jinba.io/en/pages/tools/files/extract.md): Extract information from files using their base64 representation
+- [File Input](https://docs.jinba.io/en/pages/tools/files/input.md): Fetch files from URLs
+- [Advanced Input Tools](https://docs.jinba.io/en/pages/tools/files/input_advanced.md): Advanced input tools for webhooks, Slack events, image files, and text files
+- [Marp Presentation](https://docs.jinba.io/en/pages/tools/files/marp.md): Convert Markdown to presentation slides (PDF/PPTX)
+- [Mermaid Diagram](https://docs.jinba.io/en/pages/tools/files/mermaid.md): Convert Mermaid diagram code to images (PNG/SVG/PDF)
+- [Output Tools](https://docs.jinba.io/en/pages/tools/files/output_tools.md): Create and manage output files and text data
+- [Word Processing](https://docs.jinba.io/en/pages/tools/files/word_processing.md): Advanced Word document processing and text highlighting
+- [Tools Overview](https://docs.jinba.io/en/pages/tools/index.md): Explore the full catalog of tools available in Jinba Flow
+- [Jinba Flows](https://docs.jinba.io/en/pages/tools/jinba/jinba.md): Run Jinba Flows
+- [Jinba Modules](https://docs.jinba.io/en/pages/tools/jinba/jinba_modules.md): Advanced data extraction, parsing, and validation using Jinba Modules
+- [Jinba Knowledge Base](https://docs.jinba.io/en/pages/tools/jinba/knowledge_base.md): Update and manage Jinba knowledge bases for enhanced AI workflows
+- [Vector Search](https://docs.jinba.io/en/pages/tools/jinba/vector_search.md): Semantic search for knowledge bases using vector embeddings
+- [AI Video Generation](https://docs.jinba.io/en/pages/tools/media/video_generation.md): Create high-quality videos from text descriptions using AI
+- [Chatwork](https://docs.jinba.io/en/pages/tools/productivity/chatwork.md): Connect with the Chatwork API
+- [Excel Operations](https://docs.jinba.io/en/pages/tools/productivity/excel.md): Comprehensive Excel file manipulation tools
+- [Github](https://docs.jinba.io/en/pages/tools/productivity/github.md): Automate Github tasks
+- [Google Calendar](https://docs.jinba.io/en/pages/tools/productivity/google_calendar.md): Automate Google Calendar tasks
+- [Google Forms](https://docs.jinba.io/en/pages/tools/productivity/google_forms.md): Create and manage Google Forms - create forms, add questions, batch updates, and retrieve form data
+- [Google Sheets](https://docs.jinba.io/en/pages/tools/productivity/google_sheets.md): Spreadsheet operations using Google Sheets API
+- [Advanced Google Sheets](https://docs.jinba.io/en/pages/tools/productivity/google_sheets_advanced.md): Enhanced Google Sheets integration with get sheet functionality
+- [Google Spreadsheet Advanced](https://docs.jinba.io/en/pages/tools/productivity/google_spreadsheet.md): Advanced Google Spreadsheet operations for bulk data manipulation
+- [Netsea](https://docs.jinba.io/en/pages/tools/productivity/netsea.md): Connect to the Netsea API
+- [Notion](https://docs.jinba.io/en/pages/tools/productivity/notion.md): Automate a Notion Workspace
+- [Outlook Calendar](https://docs.jinba.io/en/pages/tools/productivity/outlook_calendar.md): Automate Outlook Calendar tasks
+- [SharePoint](https://docs.jinba.io/en/pages/tools/productivity/sharepoint.md): Manage SharePoint sites and OneDrive files via Microsoft Graph
+- [Shopify](https://docs.jinba.io/en/pages/tools/productivity/shopify.md): Manage Shopify products and orders
+- [Microsoft Teams](https://docs.jinba.io/en/pages/tools/productivity/teams.md): Manage Microsoft Teams channels and messages via Microsoft Graph
+- [Browser Use (Sandbox)](https://docs.jinba.io/en/pages/tools/sandbox/browser_use_sandbox.md): AI-powered browser automation running in an E2B sandbox
+- [MCP Tools](https://docs.jinba.io/en/pages/tools/sandbox/mcp_tools.md): Model Context Protocol integration for local and remote tool execution
+- [Python Sandbox](https://docs.jinba.io/en/pages/tools/sandbox/python_sandbox_run.md): Run Python code in a sandboxed environment
+- [Arxiv Agent](https://docs.jinba.io/en/pages/tools/search/arxiv.md): Search and retrieve papers from arXiv
+- [Carnot Search](https://docs.jinba.io/en/pages/tools/search/carnot_search.md): Search for company information using Carnot Search Corp and Pro
+- [Exa AI](https://docs.jinba.io/en/pages/tools/search/exaai.md): Search the web using Exa AI
+- [Perplexity](https://docs.jinba.io/en/pages/tools/search/perplexity.md): Use Perplexity to search the web
+- [Pinecone](https://docs.jinba.io/en/pages/tools/search/pinecone.md): Vector database for semantic search and RAG applications
+- [PokeAPI](https://docs.jinba.io/en/pages/tools/search/pokeapi.md): Search for Pokemon data using PokeAPI
+- [SerpAPI](https://docs.jinba.io/en/pages/tools/search/serpapi.md): Search the web using SerpAPI
+- [Teradata](https://docs.jinba.io/en/pages/tools/search/teradata.md): Run queries on Teradata
+- [YouTube Transcript](https://docs.jinba.io/en/pages/tools/search/youtube.md): Get YouTube video transcripts
+- [Checker Tools](https://docs.jinba.io/en/pages/tools/validation/checker_tools.md): Data validation and checking tools for quality assurance
+- [Data Conversion Tools](https://docs.jinba.io/en/pages/tools/validation/data_conversion.md): Convert data between different formats and structures
+- [Input JSON with Validation](https://docs.jinba.io/en/pages/tools/validation/input.md): Validate your JSON input against a schema
+- [Jinba Modules Checker V2](https://docs.jinba.io/en/pages/tools/validation/jinba_modules_checker_v2.md): Advanced rule-based document and data validation with enhanced checking capabilities
+- [Markitdown Convert](https://docs.jinba.io/en/pages/tools/validation/markitdown_convert.md): Convert a URL to Markdown
+- [Output JSON with Validation](https://docs.jinba.io/en/pages/tools/validation/output.md): Validate your JSON output against a schema
+- [Building a RAG Chat System](https://docs.jinba.io/en/pages/tutorials/rag-chat-system.md): A step-by-step tutorial to build a Retrieval-Augmented Generation chat system using Jinba Flow — from knowledge base setup to deploying a live chat interface
+- [Privacy Policy](https://docs.jinba.io/en/privacy-policy.md): Jinba Privacy Policy
+- [Terms of Use](https://docs.jinba.io/en/terms-of-use.md): Jinba Terms of Use
+
+## OpenAPI Specs
+
+- [openapi](https://docs.jinba.io/api-reference/openapi.json)

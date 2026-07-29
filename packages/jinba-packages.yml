@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.jinba.io/en/pages/toolbox/developer/sdk
+description: >-
+  First-party client libraries Jinba documents for its developer surface. The
+  Toolbox TypeScript SDK is documented with install instructions and a full API
+  reference, but as of the harvest date it was NOT resolvable on the public npm
+  registry (see registry_status). It is recorded here as a documented first-party
+  SDK; verify availability before depending on it.
+packages:
+- language: typescript
+  registry: npm
+  name: "@jinba-toolbox/sdk"
+  url: https://www.npmjs.com/package/@jinba-toolbox/sdk
+  install: npm install @jinba-toolbox/sdk
+  official: true
+  documented: true
+  registry_status: 404 (not found on npm at 2026-07-19)
+  docs: https://docs.jinba.io/en/pages/toolbox/developer/sdk
+  description: >-
+    Type-safe TypeScript/JavaScript client wrapping the Jinba Toolbox REST API —
+    createClient(), listToolSets, run/test, publishVersion, listRuns, etc.
+    Throws JinbaTBError on non-2xx responses.

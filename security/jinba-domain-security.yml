@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: docs.jinba.io
+  https: false
+- host: toolbox-api.jinba.dev
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 28 16:24:04 2026 GMT
+  hsts: null
+- host: api.jinba.dev
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 15 21:47:49 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: jinba.io
+  dnssec: true
+  caa: []
+  spf: false
+  dmarc: false
+- domain: jinba.dev
+  dnssec: true
+  caa: []
+  spf: false
+  dmarc: false
