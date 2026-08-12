@@ -332,6 +332,8 @@ apis:
   - type: GettingStarted
     url: https://docs.jinba.io/en/pages/basics/quickstart
 common:
+- type: Overlay
+  url: overlays/jinba-flow-overlay.yaml
 - url: https://jinba.io
   type: DeveloperPortal
 - url: https://docs.jinba.io/en/introduction
