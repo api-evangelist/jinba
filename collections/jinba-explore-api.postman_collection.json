@@ -1,0 +1,198 @@
+{
+  "item": [
+    {
+      "id": "ab44b2ea-44aa-42d1-9b91-16314765ecea",
+      "name": "Explore",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6e10f492-5280-4d76-b58e-9718905b0a0f",
+          "name": "List public toolsets",
+          "request": {
+            "name": "List public toolsets",
+            "description": {
+              "content": "Unauthenticated route to browse public toolsets.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "explore",
+                "toolsets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "89d54e5b-cc0c-4565-9e82-69bf58ef228a",
+              "name": "A list of public toolsets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "explore",
+                    "toolsets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"organizationId\": \"string\",\n    \"slug\": \"string\",\n    \"name\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"description\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"sandbox\": {\n      \"provider\": \"e2b\",\n      \"language\": \"typescript\",\n      \"packages\": [\n        {\n          \"name\": \"string\"\n        },\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"resources\": {\n        \"timeout\": 8634\n      }\n    },\n    \"visibility\": \"public\",\n    \"mcpEnabled\": false,\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"latestVersion\": \"string\",\n    \"publishedVersion\": \"string\",\n    \"createdAt\": \"1991-07-23T17:13:45.591Z\",\n    \"updatedAt\": \"1958-07-08T08:36:45.402Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"organizationId\": \"string\",\n    \"slug\": \"string\",\n    \"name\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"description\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"sandbox\": {\n      \"provider\": \"e2b\",\n      \"language\": \"typescript\",\n      \"packages\": [\n        {\n          \"name\": \"string\"\n        },\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"resources\": {\n        \"timeout\": 5090\n      }\n    },\n    \"visibility\": \"private\",\n    \"mcpEnabled\": false,\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"latestVersion\": \"string\",\n    \"publishedVersion\": \"string\",\n    \"createdAt\": \"1956-04-09T20:21:59.672Z\",\n    \"updatedAt\": \"2017-11-15T00:50:01.188Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4297b857-9deb-4edd-a8ce-5d307543f74d",
+          "name": "List popular tags",
+          "request": {
+            "name": "List popular tags",
+            "description": {},
+            "url": {
+              "path": [
+                "explore",
+                "tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "54e0b268-03ae-43d0-827b-6a301c818ccc",
+              "name": "A list of popular tags",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "explore",
+                    "tags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  \"string\",\n  \"string\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.jinba.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "43aaf401-8669-4c51-9bf9-e226ee93e4f9",
+    "name": "Jinba Flow External API Keys Explore API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for executing published Jinba Flow workflows programmatically. Once a workflow is published, an API key is automatically generated and the flow can be invoked from external systems, webhooks, or any HTTP client. Execution can be synchronous (blocking, returns the result) or asynchronous (returns immediately with a run id). Authentication is a per-flow Bearer API key. NOTE: Faithfully generated by the API Evangelist enrichment pipeline from Jinba's published API docs (https://docs.jinba.io/en/pages/basics/api) because the provider's own openapi.json was not reachable from the harvest environment. Treat the provider spec as canonical.\n\nContact Support:\n Name: Jinba",
+      "type": "text/plain"
+    }
+  }
+}

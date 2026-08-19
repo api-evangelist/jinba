@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jinba Flow External API Keys MCP API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "MCP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Public MCP endpoint (JSON-RPC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/public/:orgSlug/:toolsetSlug/mcp",
+            "params": [
+              {
+                "name": "orgSlug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "toolsetSlug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Model Context Protocol endpoint (JSON-RPC over HTTP, streamable) exposing a public toolset as an MCP server for AI agents. Supports tools/list and tools/call."
+        },
+        {
+          "info": {
+            "name": "Organization MCP endpoint (JSON-RPC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/mcp",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Organization-scoped Model Context Protocol endpoint exposing a toolset as an MCP server for internal agents and CI/CD."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

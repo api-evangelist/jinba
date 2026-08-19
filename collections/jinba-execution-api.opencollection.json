@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jinba Flow External API Keys Execution API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Execution",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Execute a published tool",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/tools/:toolSlug/run",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              },
+              {
+                "name": "toolSlug",
+                "value": "",
+                "type": "path",
+                "description": "Tool slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Execute a published tool"
+        },
+        {
+          "info": {
+            "name": "Test a tool",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/tools/:toolSlug/test",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              },
+              {
+                "name": "toolSlug",
+                "value": "",
+                "type": "path",
+                "description": "Tool slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Test a tool by running draft code (no published version required)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

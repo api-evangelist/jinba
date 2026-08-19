@@ -1,0 +1,140 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jinba Flow External API Keys ToolSets API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ToolSets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List toolsets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List toolsets"
+        },
+        {
+          "info": {
+            "name": "Create toolset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create toolset"
+        },
+        {
+          "info": {
+            "name": "Get toolset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ]
+          },
+          "docs": "Get a toolset by slug (includes tools)."
+        },
+        {
+          "info": {
+            "name": "Update toolset",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update toolset"
+        },
+        {
+          "info": {
+            "name": "Delete toolset",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ]
+          },
+          "docs": "Delete toolset"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,721 @@
+{
+  "item": [
+    {
+      "id": "9396a6c0-5ec3-4b32-ada5-6f260ced5847",
+      "name": "ToolSets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ca43c338-2757-4b46-b603-20a9e3feab2f",
+          "name": "List toolsets",
+          "request": {
+            "name": "List toolsets",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "251664a2-c3d1-49c6-a95b-8065bca399eb",
+              "name": "A list of toolsets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"organizationId\": \"string\",\n    \"slug\": \"string\",\n    \"name\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\"\n    },\n    \"description\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"sandbox\": {\n      \"provider\": \"daytona\",\n      \"language\": \"typescript\",\n      \"packages\": [\n        {\n          \"name\": \"string\"\n        },\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"resources\": {\n        \"timeout\": 5874\n      }\n    },\n    \"visibility\": \"private\",\n    \"mcpEnabled\": true,\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"latestVersion\": \"string\",\n    \"publishedVersion\": \"string\",\n    \"createdAt\": \"1982-01-03T02:50:59.464Z\",\n    \"updatedAt\": \"1953-11-28T06:10:20.516Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"organizationId\": \"string\",\n    \"slug\": \"string\",\n    \"name\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"description\": {\n      \"default\": \"string\"\n    },\n    \"sandbox\": {\n      \"provider\": \"e2b\",\n      \"language\": \"typescript\",\n      \"packages\": [\n        {\n          \"name\": \"string\"\n        },\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"resources\": {\n        \"timeout\": 2744\n      }\n    },\n    \"visibility\": \"public\",\n    \"mcpEnabled\": true,\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"latestVersion\": \"string\",\n    \"publishedVersion\": \"string\",\n    \"createdAt\": \"2016-01-31T19:52:55.607Z\",\n    \"updatedAt\": \"1987-05-13T03:38:52.086Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d66a130-5669-423b-8d91-3b1a09e8a3c8",
+          "name": "Create toolset",
+          "request": {
+            "name": "Create toolset",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"slug\": \"<string>\",\n  \"name\": {\n    \"default\": \"<string>\",\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"description\": {\n    \"default\": \"<string>\",\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\"\n  },\n  \"sandbox\": {\n    \"provider\": \"<string>\",\n    \"language\": \"<string>\",\n    \"packages\": [\n      {\n        \"name\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\"\n      }\n    ],\n    \"resources\": {\n      \"timeout\": \"<integer>\"\n    }\n  },\n  \"visibility\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c86a813e-1573-4494-954a-6b45568c8128",
+              "name": "ToolSet created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"slug\": \"<string>\",\n  \"name\": {\n    \"default\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"sandbox\": {\n    \"provider\": \"daytona\",\n    \"language\": \"typescript\",\n    \"packages\": [\n      {\n        \"name\": \"string\"\n      },\n      {\n        \"name\": \"string\"\n      }\n    ],\n    \"resources\": {\n      \"timeout\": 4486\n    }\n  },\n  \"visibility\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"organizationId\": \"string\",\n  \"slug\": \"string\",\n  \"name\": {\n    \"default\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\"\n  },\n  \"sandbox\": {\n    \"provider\": \"e2b\",\n    \"language\": \"typescript\",\n    \"packages\": [\n      {\n        \"name\": \"string\"\n      },\n      {\n        \"name\": \"string\"\n      }\n    ],\n    \"resources\": {\n      \"timeout\": 3005\n    }\n  },\n  \"visibility\": \"public\",\n  \"mcpEnabled\": true,\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"latestVersion\": \"string\",\n  \"publishedVersion\": \"string\",\n  \"createdAt\": \"1962-02-14T18:32:13.976Z\",\n  \"updatedAt\": \"1957-11-10T09:33:34.377Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "be0669dc-0a61-4a1f-bcc4-939eaa6f9f28",
+              "name": "Bad Request — invalid input or missing required fields",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"slug\": \"<string>\",\n  \"name\": {\n    \"default\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"sandbox\": {\n    \"provider\": \"daytona\",\n    \"language\": \"typescript\",\n    \"packages\": [\n      {\n        \"name\": \"string\"\n      },\n      {\n        \"name\": \"string\"\n      }\n    ],\n    \"resources\": {\n      \"timeout\": 4486\n    }\n  },\n  \"visibility\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"https://ErbGvdukJzQwQsoHyfoNIvexkMRlhZ.efdnyeQgjgum+UjtoTQrrVWCjt8AgCeR77gZcrJAhSHF2k.Ij8+7kfD0frQEla\",\n  \"title\": \"string\",\n  \"status\": 2873,\n  \"detail\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7711e03b-de3e-44c7-be1b-a434b7ff344a",
+          "name": "Get toolset",
+          "request": {
+            "name": "Get toolset",
+            "description": {
+              "content": "Get a toolset by slug (includes tools).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0c10383d-e4c4-4601-b46b-7366e2523c98",
+              "name": "ToolSet details including tools",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"organizationId\": \"string\",\n  \"slug\": \"string\",\n  \"name\": {\n    \"default\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\"\n  },\n  \"sandbox\": {\n    \"provider\": \"e2b\",\n    \"language\": \"typescript\",\n    \"packages\": [\n      {\n        \"name\": \"string\"\n      },\n      {\n        \"name\": \"string\"\n      }\n    ],\n    \"resources\": {\n      \"timeout\": 3005\n    }\n  },\n  \"visibility\": \"public\",\n  \"mcpEnabled\": true,\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"latestVersion\": \"string\",\n  \"publishedVersion\": \"string\",\n  \"createdAt\": \"1962-02-14T18:32:13.976Z\",\n  \"updatedAt\": \"1957-11-10T09:33:34.377Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e40fde32-37b4-4344-a321-154dbb2d022c",
+              "name": "Not Found — resource does not exist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"https://ErbGvdukJzQwQsoHyfoNIvexkMRlhZ.efdnyeQgjgum+UjtoTQrrVWCjt8AgCeR77gZcrJAhSHF2k.Ij8+7kfD0frQEla\",\n  \"title\": \"string\",\n  \"status\": 2873,\n  \"detail\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9fa93185-9d4b-4ab8-a3ba-c8a0d00b2c92",
+          "name": "Update toolset",
+          "request": {
+            "name": "Update toolset",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"visibility\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"mcpEnabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "522e67e2-a0c6-48ee-ab4d-769c88465079",
+              "name": "ToolSet updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"visibility\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"mcpEnabled\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"organizationId\": \"string\",\n  \"slug\": \"string\",\n  \"name\": {\n    \"default\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\"\n  },\n  \"sandbox\": {\n    \"provider\": \"e2b\",\n    \"language\": \"typescript\",\n    \"packages\": [\n      {\n        \"name\": \"string\"\n      },\n      {\n        \"name\": \"string\"\n      }\n    ],\n    \"resources\": {\n      \"timeout\": 3005\n    }\n  },\n  \"visibility\": \"public\",\n  \"mcpEnabled\": true,\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"latestVersion\": \"string\",\n  \"publishedVersion\": \"string\",\n  \"createdAt\": \"1962-02-14T18:32:13.976Z\",\n  \"updatedAt\": \"1957-11-10T09:33:34.377Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "278d9543-7ac3-47d0-a55a-a125e6a65c7f",
+          "name": "Delete toolset",
+          "request": {
+            "name": "Delete toolset",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "062ac2b4-7896-463f-aff8-7ee689686a7b",
+              "name": "ToolSet deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.jinba.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "fc4db18a-c8a5-4e71-8838-f57823fb2e53",
+    "name": "Jinba Flow External API Keys ToolSets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for executing published Jinba Flow workflows programmatically. Once a workflow is published, an API key is automatically generated and the flow can be invoked from external systems, webhooks, or any HTTP client. Execution can be synchronous (blocking, returns the result) or asynchronous (returns immediately with a run id). Authentication is a per-flow Bearer API key. NOTE: Faithfully generated by the API Evangelist enrichment pipeline from Jinba's published API docs (https://docs.jinba.io/en/pages/basics/api) because the provider's own openapi.json was not reachable from the harvest environment. Treat the provider spec as canonical.\n\nContact Support:\n Name: Jinba",
+      "type": "text/plain"
+    }
+  }
+}

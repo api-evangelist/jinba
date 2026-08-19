@@ -2,19 +2,15 @@ generated: '2026-07-19'
 method: searched
 status: published
 source: https://docs.jinba.io/en/pages/toolbox/developer/mcp
-description: >-
-  Jinba Toolbox provides native Model Context Protocol (MCP) endpoints that
-  expose any toolset as an MCP-compatible server. Each MCP-enabled toolset
-  becomes an MCP server reachable over streamable HTTP (JSON-RPC), supporting
-  tools/list and tools/call. AI clients such as Claude Desktop, Cursor, and
-  custom agent frameworks connect using a Bearer API key (jtb_ prefix). Tools
-  execute in isolated E2B/Daytona sandboxes using the published version. Jinba
-  App / App Neo additionally lets users register any external MCP server as a
-  connector and exposes a workspace MCP server.
+description: Jinba Toolbox provides native Model Context Protocol (MCP) endpoints that expose any toolset
+  as an MCP-compatible server. Each MCP-enabled toolset becomes an MCP server reachable over streamable
+  HTTP (JSON-RPC), supporting tools/list and tools/call. AI clients such as Claude Desktop, Cursor, and
+  custom agent frameworks connect using a Bearer API key (jtb_ prefix). Tools execute in isolated E2B/Daytona
+  sandboxes using the published version. Jinba App / App Neo additionally lets users register any external
+  MCP server as a connector and exposes a workspace MCP server.
 transport: http
-notes: >-
-  MCP must be enabled per toolset (mcpEnabled: true). Server URL is templated
-  per organization/toolset — there is no single fixed hosted MCP URL.
+notes: 'MCP must be enabled per toolset (mcpEnabled: true). Server URL is templated per organization/toolset
+  — there is no single fixed hosted MCP URL.'
 servers:
 - name: jinba-toolbox-public-mcp
   scope: public toolsets
@@ -34,4 +30,13 @@ methods:
 clients_documented:
 - Claude Desktop
 - Cursor
-- "@modelcontextprotocol/sdk (custom agents)"
+- '@modelcontextprotocol/sdk (custom agents)'
+deployment:
+  mode: none
+  endpoint: https://toolbox-api.jinba.dev/v1/public/{orgSlug}/{toolsetSlug}/mcp
+  verified: probed
+  probe: dead
+  note: the endpoint this manifest claimed did not answer; recorded as none rather than deleted so the
+    claim stays auditable
+  checked: '2026-08-12'
+  source: catalog MCP census

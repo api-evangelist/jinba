@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jinba Flow External API Keys Public API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Public",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Execute a tool via the public endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/public/:orgSlug/:toolsetSlug/run/:toolSlug",
+            "params": [
+              {
+                "name": "orgSlug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "toolsetSlug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "toolSlug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Public route allowing external consumers to execute a tool in a public toolset using an API key, without requiring organization membership context."
+        },
+        {
+          "info": {
+            "name": "Public MCP endpoint (JSON-RPC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/public/:orgSlug/:toolsetSlug/mcp",
+            "params": [
+              {
+                "name": "orgSlug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "toolsetSlug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Model Context Protocol endpoint (JSON-RPC over HTTP, streamable) exposing a public toolset as an MCP server for AI agents. Supports tools/list and tools/call."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,133 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jinba Flow External API Keys Versions API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Versions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List versions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/versions",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ]
+          },
+          "docs": "List versions"
+        },
+        {
+          "info": {
+            "name": "Publish a new version",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/versions",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Publish a new version"
+        },
+        {
+          "info": {
+            "name": "Get version details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/versions/:version",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get version details"
+        },
+        {
+          "info": {
+            "name": "Set the active published version",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/published-version",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Set the active published version"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

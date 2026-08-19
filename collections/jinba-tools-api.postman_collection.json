@@ -1,0 +1,756 @@
+{
+  "item": [
+    {
+      "id": "9b1aa117-7ad8-415e-8fcd-deb57ed16d25",
+      "name": "Tools",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "876eed30-8170-4752-9587-8ceaf0d69e9e",
+          "name": "List tools in a toolset",
+          "request": {
+            "name": "List tools in a toolset",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug",
+                "tools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "577fa6ca-9968-432f-8d4d-fcbf0102c201",
+              "name": "A list of tools",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug",
+                    "tools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"toolSetId\": \"string\",\n    \"slug\": \"string\",\n    \"name\": {\n      \"default\": \"string\"\n    },\n    \"description\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\"\n    },\n    \"inputSchema\": {},\n    \"outputSchema\": {},\n    \"code\": \"string\",\n    \"entrypoint\": \"string\",\n    \"createdAt\": \"1996-04-03T16:27:49.269Z\",\n    \"updatedAt\": \"2023-01-01T22:32:47.784Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"toolSetId\": \"string\",\n    \"slug\": \"string\",\n    \"name\": {\n      \"default\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\",\n      \"key_2\": \"string\",\n      \"key_3\": \"string\",\n      \"key_4\": \"string\"\n    },\n    \"description\": {\n      \"default\": \"string\"\n    },\n    \"inputSchema\": {},\n    \"outputSchema\": {},\n    \"code\": \"string\",\n    \"entrypoint\": \"string\",\n    \"createdAt\": \"1949-02-17T03:24:33.670Z\",\n    \"updatedAt\": \"2002-04-22T11:38:18.223Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f9cdf2d-16a7-4bae-b9c9-e115d127ea19",
+          "name": "Create tool",
+          "request": {
+            "name": "Create tool",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug",
+                "tools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"slug\": \"<string>\",\n  \"name\": {\n    \"default\": \"<string>\",\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\"\n  },\n  \"inputSchema\": \"<object>\",\n  \"description\": {\n    \"default\": \"<string>\",\n    \"key_0\": \"<string>\"\n  },\n  \"outputSchema\": \"<object>\",\n  \"code\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "63ddfa0a-ff40-4e5d-bbe3-c749063d5286",
+              "name": "Tool created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug",
+                    "tools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"slug\": \"<string>\",\n  \"name\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"inputSchema\": \"<object>\",\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"outputSchema\": \"<object>\",\n  \"code\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"toolSetId\": \"string\",\n  \"slug\": \"string\",\n  \"name\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"inputSchema\": {},\n  \"outputSchema\": {},\n  \"code\": \"string\",\n  \"entrypoint\": \"string\",\n  \"createdAt\": \"1999-09-18T00:59:17.484Z\",\n  \"updatedAt\": \"1948-07-19T10:43:53.023Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aeba6c54-d91f-4451-b345-dea2a2f9af54",
+          "name": "Get tool",
+          "request": {
+            "name": "Get tool",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug",
+                "tools",
+                ":toolSlug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "toolSlug",
+                  "description": "(Required) Tool slug"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7b3d96e4-97ba-4c43-bc54-d7646473531c",
+              "name": "Tool details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug",
+                    "tools",
+                    ":toolSlug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "toolSlug",
+                      "description": "(Required) Tool slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"toolSetId\": \"string\",\n  \"slug\": \"string\",\n  \"name\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"inputSchema\": {},\n  \"outputSchema\": {},\n  \"code\": \"string\",\n  \"entrypoint\": \"string\",\n  \"createdAt\": \"1999-09-18T00:59:17.484Z\",\n  \"updatedAt\": \"1948-07-19T10:43:53.023Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c29c6570-ebfa-4193-bf8c-18b556af9b21",
+              "name": "Not Found — resource does not exist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug",
+                    "tools",
+                    ":toolSlug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "toolSlug",
+                      "description": "(Required) Tool slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"https://xPrRLkpapqrspca.upkQeBU+ne3ax,eMaFM8AYOTdYD7n.XWS,q7HlwyK52,dFnbcRdrOGOjj1ZcbmWyUda.lIy\",\n  \"title\": \"string\",\n  \"status\": 4292,\n  \"detail\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b67e3770-06ca-4b4d-9fcf-70330ef2c5a9",
+          "name": "Update tool",
+          "request": {
+            "name": "Update tool",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug",
+                "tools",
+                ":toolSlug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "toolSlug",
+                  "description": "(Required) Tool slug"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"slug\": \"<string>\",\n  \"name\": {\n    \"default\": \"<string>\",\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\"\n  },\n  \"inputSchema\": \"<object>\",\n  \"description\": {\n    \"default\": \"<string>\",\n    \"key_0\": \"<string>\"\n  },\n  \"outputSchema\": \"<object>\",\n  \"code\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2d61ef31-b0dc-4dbe-b2e1-abaef6cf8a7d",
+              "name": "Tool updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug",
+                    "tools",
+                    ":toolSlug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "toolSlug",
+                      "description": "(Required) Tool slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"slug\": \"<string>\",\n  \"name\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"inputSchema\": \"<object>\",\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"outputSchema\": \"<object>\",\n  \"code\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"toolSetId\": \"string\",\n  \"slug\": \"string\",\n  \"name\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"description\": {\n    \"default\": \"string\",\n    \"key_0\": \"string\"\n  },\n  \"inputSchema\": {},\n  \"outputSchema\": {},\n  \"code\": \"string\",\n  \"entrypoint\": \"string\",\n  \"createdAt\": \"1999-09-18T00:59:17.484Z\",\n  \"updatedAt\": \"1948-07-19T10:43:53.023Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9de06595-96a4-40aa-bca9-3a8952fa8068",
+          "name": "Delete tool",
+          "request": {
+            "name": "Delete tool",
+            "description": {},
+            "url": {
+              "path": [
+                "orgs",
+                ":orgId",
+                "toolsets",
+                ":slug",
+                "tools",
+                ":toolSlug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) ToolSet slug"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "toolSlug",
+                  "description": "(Required) Tool slug"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9d530dc3-d7cd-4cf3-b2a0-e87f57bb9de1",
+              "name": "Tool deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orgs",
+                    ":orgId",
+                    "toolsets",
+                    ":slug",
+                    "tools",
+                    ":toolSlug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) ToolSet slug"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "toolSlug",
+                      "description": "(Required) Tool slug"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.jinba.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "33d4c055-d456-4a95-a509-e08a5bc1c87a",
+    "name": "Jinba Flow External API Keys Tools API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for executing published Jinba Flow workflows programmatically. Once a workflow is published, an API key is automatically generated and the flow can be invoked from external systems, webhooks, or any HTTP client. Execution can be synchronous (blocking, returns the result) or asynchronous (returns immediately with a run id). Authentication is a per-flow Bearer API key. NOTE: Faithfully generated by the API Evangelist enrichment pipeline from Jinba's published API docs (https://docs.jinba.io/en/pages/basics/api) because the provider's own openapi.json was not reachable from the harvest environment. Treat the provider spec as canonical.\n\nContact Support:\n Name: Jinba",
+      "type": "text/plain"
+    }
+  }
+}

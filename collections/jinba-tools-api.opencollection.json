@@ -1,0 +1,170 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jinba Flow External API Keys Tools API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tools",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tools in a toolset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/tools",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ]
+          },
+          "docs": "List tools in a toolset"
+        },
+        {
+          "info": {
+            "name": "Create tool",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/tools",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create tool"
+        },
+        {
+          "info": {
+            "name": "Get tool",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/tools/:toolSlug",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              },
+              {
+                "name": "toolSlug",
+                "value": "",
+                "type": "path",
+                "description": "Tool slug"
+              }
+            ]
+          },
+          "docs": "Get tool"
+        },
+        {
+          "info": {
+            "name": "Update tool",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/tools/:toolSlug",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              },
+              {
+                "name": "toolSlug",
+                "value": "",
+                "type": "path",
+                "description": "Tool slug"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update tool"
+        },
+        {
+          "info": {
+            "name": "Delete tool",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.jinba.dev/orgs/:orgId/toolsets/:slug/tools/:toolSlug",
+            "params": [
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "ToolSet slug"
+              },
+              {
+                "name": "toolSlug",
+                "value": "",
+                "type": "path",
+                "description": "Tool slug"
+              }
+            ]
+          },
+          "docs": "Delete tool"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

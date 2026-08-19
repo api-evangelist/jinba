@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jinba Flow External API Keys Explore API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Explore",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List public toolsets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/explore/toolsets"
+          },
+          "docs": "Unauthenticated route to browse public toolsets."
+        },
+        {
+          "info": {
+            "name": "List popular tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jinba.dev/explore/tags"
+          },
+          "docs": "List popular tags"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
