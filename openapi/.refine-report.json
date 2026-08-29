@@ -1,40 +1,47 @@
 {
   "provider": "jinba",
   "sources": [
-    "jinba-api-keys-api-openapi.yml",
-    "jinba-credits-api-openapi.yml",
-    "jinba-execution-api-openapi.yml",
-    "jinba-explore-api-openapi.yml",
-    "jinba-flows-api-openapi.yml",
-    "jinba-mcp-api-openapi.yml",
-    "jinba-members-api-openapi.yml",
-    "jinba-organizations-api-openapi.yml",
-    "jinba-public-api-openapi.yml",
-    "jinba-runs-api-openapi.yml",
-    "jinba-tools-api-openapi.yml",
-    "jinba-toolsets-api-openapi.yml",
-    "jinba-versions-api-openapi.yml",
-    "jinba-webhooks-api-openapi.yml"
+    "_original/jinba-flow-openapi.yml",
+    "_original/jinba-toolbox-openapi.yml"
   ],
   "outputs": [
+    "jinba-flows-api-openapi.yml",
     "jinba-api-keys-api-openapi.yml",
     "jinba-credits-api-openapi.yml",
     "jinba-execution-api-openapi.yml",
     "jinba-explore-api-openapi.yml",
-    "jinba-flows-api-openapi.yml",
     "jinba-mcp-api-openapi.yml",
     "jinba-members-api-openapi.yml",
     "jinba-organizations-api-openapi.yml",
     "jinba-public-api-openapi.yml",
     "jinba-runs-api-openapi.yml",
-    "jinba-tools-api-openapi.yml",
     "jinba-toolsets-api-openapi.yml",
+    "jinba-tools-api-openapi.yml",
     "jinba-versions-api-openapi.yml",
     "jinba-webhooks-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "jinba-flow-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "jinba-toolbox-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0"
+  ],
+  "skipped": [
+    "jinba-api-keys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-credits-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-execution-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-explore-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-flows-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-mcp-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-members-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-public-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-runs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-tools-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-toolsets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-versions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
