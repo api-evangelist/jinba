@@ -299,26 +299,6 @@ apis:
     url: https://docs.jinba.io/en/pages/basics/api
   - type: GettingStarted
     url: https://docs.jinba.io/en/pages/basics/quickstart
-- aid: jinba:jinba-toolsets-api
-  name: Jinba ToolSets API
-  description: The ToolSets API from Jinba — 2 operation(s) for toolsets.
-  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
-  baseURL: https://toolbox-api.jinba.dev/v1
-  tags:
-  - ToolSets
-  properties:
-  - type: OpenAPI
-    url: openapi/jinba-toolsets-api-openapi.yml
-  - type: Documentation
-    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
-  - type: APIReference
-    url: https://docs.jinba.io/en/pages/toolbox/developer/api
-  - type: GettingStarted
-    url: https://docs.jinba.io/en/pages/toolbox/quickstart
-  - type: Documentation
-    url: https://docs.jinba.io/en/pages/basics/api
-  - type: GettingStarted
-    url: https://docs.jinba.io/en/pages/basics/quickstart
 - aid: jinba:jinba-versions-api
   name: Jinba Versions API
   description: The Versions API from Jinba — 3 operation(s) for versions.
@@ -351,6 +331,26 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/jinba-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  - type: APIReference
+    url: https://docs.jinba.io/en/pages/toolbox/developer/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/toolbox/quickstart
+  - type: Documentation
+    url: https://docs.jinba.io/en/pages/basics/api
+  - type: GettingStarted
+    url: https://docs.jinba.io/en/pages/basics/quickstart
+- aid: jinba:jinba-tool-sets-api
+  name: Jinba Tool Sets API
+  description: The Tool Sets API from Jinba — 2 operation(s) for tool sets.
+  humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
+  baseURL: https://toolbox-api.jinba.dev/v1
+  tags:
+  - Tool Sets
+  properties:
+  - type: OpenAPI
+    url: openapi/jinba-tool-sets-api-openapi.yml
   - type: Documentation
     url: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
   - type: APIReference
