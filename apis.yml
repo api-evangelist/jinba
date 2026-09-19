@@ -103,6 +103,8 @@ apis:
   humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
   baseURL: https://toolbox-api.jinba.dev/v1
   tags:
+  - Credit
+  tags_raw:
   - Credits
   properties:
   - type: OpenAPI
@@ -163,6 +165,8 @@ apis:
   humanURL: https://docs.jinba.io/en/pages/toolbox/what-is-jinba-toolbox
   baseURL: https://toolbox-api.jinba.dev/v1
   tags:
+  - Flow
+  tags_raw:
   - Flows
   properties:
   - type: OpenAPI
