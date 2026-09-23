@@ -20,13 +20,17 @@
     "jinba-versions-api-openapi.yml",
     "jinba-webhooks-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "jinba-flow-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "jinba-toolbox-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0"
+    "jinba-toolbox-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: jinba-tool-sets-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 14 total)"
   ],
   "skipped": [
     "jinba-api-keys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -39,8 +43,8 @@
     "jinba-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jinba-public-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jinba-runs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jinba-tool-sets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jinba-tools-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "jinba-toolsets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jinba-versions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jinba-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
