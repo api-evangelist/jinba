@@ -56,7 +56,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Agents
-- Workflow-Automation
+- Workflow Automation
 - Enterprise
 - MCP
 - Low-Code
@@ -74,6 +74,7 @@ tags_raw:
 - Developer Tools
 - Tools
 - Automation
+- Workflow-Automation
 apis:
 - aid: jinba:jinba-api-keys-api
   name: Jinba API Keys API

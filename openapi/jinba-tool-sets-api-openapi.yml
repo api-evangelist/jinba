@@ -186,19 +186,6 @@ components:
         updatedAt:
           type: string
           format: date-time
-    Problem:
-      type: object
-      description: RFC 9457 Problem Details.
-      properties:
-        type:
-          type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
     SandboxConfig:
       type: object
       properties:
@@ -222,18 +209,31 @@ components:
           properties:
             timeout:
               type: integer
+    Problem:
+      type: object
+      description: RFC 9457 Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
   parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
     Slug:
       name: slug
       in: path
       required: true
       description: ToolSet slug
+      schema:
+        type: string
+    OrgId:
+      name: orgId
+      in: path
+      required: true
       schema:
         type: string
   responses:

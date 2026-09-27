@@ -99,6 +99,19 @@ components:
         version:
           type: string
           description: Optional published version to pin for reproducibility.
+    Problem:
+      type: object
+      description: RFC 9457 Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
     RunResult:
       type: object
       properties:
@@ -132,19 +145,6 @@ components:
                 type: string
         durationMs:
           type: integer
-    Problem:
-      type: object
-      description: RFC 9457 Problem Details.
-      properties:
-        type:
-          type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
   responses:
     TooManyRequests:
       description: Too Many Requests — rate limit exceeded
