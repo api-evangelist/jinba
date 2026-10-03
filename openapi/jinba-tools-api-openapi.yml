@@ -99,14 +99,6 @@ paths:
           description: Tool deleted
 components:
   schemas:
-    LocalizedText:
-      type: object
-      description: A localized text object keyed by locale, with a "default" key.
-      properties:
-        default:
-          type: string
-      additionalProperties:
-        type: string
     Tool:
       type: object
       properties:
@@ -138,6 +130,14 @@ components:
         updatedAt:
           type: string
           format: date-time
+    LocalizedText:
+      type: object
+      description: A localized text object keyed by locale, with a "default" key.
+      properties:
+        default:
+          type: string
+      additionalProperties:
+        type: string
     ToolCreate:
       type: object
       required:
@@ -178,17 +178,17 @@ components:
       description: ToolSet slug
       schema:
         type: string
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
     ToolSlug:
       name: toolSlug
       in: path
       required: true
       description: Tool slug
+      schema:
+        type: string
+    OrgId:
+      name: orgId
+      in: path
+      required: true
       schema:
         type: string
   responses:

@@ -51,14 +51,6 @@ paths:
                   type: string
 components:
   schemas:
-    LocalizedText:
-      type: object
-      description: A localized text object keyed by locale, with a "default" key.
-      properties:
-        default:
-          type: string
-      additionalProperties:
-        type: string
     SandboxConfig:
       type: object
       properties:
@@ -82,6 +74,14 @@ components:
           properties:
             timeout:
               type: integer
+    LocalizedText:
+      type: object
+      description: A localized text object keyed by locale, with a "default" key.
+      properties:
+        default:
+          type: string
+      additionalProperties:
+        type: string
     ToolSet:
       type: object
       properties:

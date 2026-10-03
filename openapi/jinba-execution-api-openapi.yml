@@ -70,6 +70,51 @@ paths:
               schema:
                 $ref: '#/components/schemas/RunResult'
 components:
+  parameters:
+    Slug:
+      name: slug
+      in: path
+      required: true
+      description: ToolSet slug
+      schema:
+        type: string
+    ToolSlug:
+      name: toolSlug
+      in: path
+      required: true
+      description: Tool slug
+      schema:
+        type: string
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    TooManyRequests:
+      description: Too Many Requests — rate limit exceeded
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+          description: Seconds to wait before retrying
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    BadRequest:
+      description: Bad Request — invalid input or missing required fields
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    NotFound:
+      description: Not Found — resource does not exist
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
   schemas:
     RunRequest:
       type: object
@@ -128,51 +173,6 @@ components:
           type: integer
         detail:
           type: string
-  parameters:
-    Slug:
-      name: slug
-      in: path
-      required: true
-      description: ToolSet slug
-      schema:
-        type: string
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
-    ToolSlug:
-      name: toolSlug
-      in: path
-      required: true
-      description: Tool slug
-      schema:
-        type: string
-  responses:
-    NotFound:
-      description: Not Found — resource does not exist
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-    BadRequest:
-      description: Bad Request — invalid input or missing required fields
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-    TooManyRequests:
-      description: Too Many Requests — rate limit exceeded
-      headers:
-        Retry-After:
-          schema:
-            type: integer
-          description: Seconds to wait before retrying
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
   securitySchemes:
     bearerAuth:
       type: http

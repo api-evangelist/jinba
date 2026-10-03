@@ -34,13 +34,6 @@ paths:
                 items:
                   $ref: '#/components/schemas/Member'
 components:
-  parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
     Member:
       type: object
@@ -55,6 +48,13 @@ components:
           - Owner
           - Admin
           - Member
+  parameters:
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http

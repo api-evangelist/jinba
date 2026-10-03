@@ -113,38 +113,29 @@ paths:
           description: ToolSet deleted
 components:
   schemas:
-    LocalizedText:
+    SandboxConfig:
       type: object
-      description: A localized text object keyed by locale, with a "default" key.
       properties:
-        default:
-          type: string
-      additionalProperties:
-        type: string
-    ToolSetCreate:
-      type: object
-      required:
-      - slug
-      - name
-      properties:
-        slug:
-          type: string
-        name:
-          $ref: '#/components/schemas/LocalizedText'
-        description:
-          $ref: '#/components/schemas/LocalizedText'
-        sandbox:
-          $ref: '#/components/schemas/SandboxConfig'
-        visibility:
+        provider:
           type: string
           enum:
-          - public
-          - private
-          - restricted
-        tags:
+          - e2b
+          - daytona
+        language:
+          type: string
+          example: typescript
+        packages:
           type: array
           items:
-            type: string
+            type: object
+            properties:
+              name:
+                type: string
+        resources:
+          type: object
+          properties:
+            timeout:
+              type: integer
     ToolSet:
       type: object
       properties:
@@ -186,29 +177,38 @@ components:
         updatedAt:
           type: string
           format: date-time
-    SandboxConfig:
+    LocalizedText:
       type: object
+      description: A localized text object keyed by locale, with a "default" key.
       properties:
-        provider:
+        default:
+          type: string
+      additionalProperties:
+        type: string
+    ToolSetCreate:
+      type: object
+      required:
+      - slug
+      - name
+      properties:
+        slug:
+          type: string
+        name:
+          $ref: '#/components/schemas/LocalizedText'
+        description:
+          $ref: '#/components/schemas/LocalizedText'
+        sandbox:
+          $ref: '#/components/schemas/SandboxConfig'
+        visibility:
           type: string
           enum:
-          - e2b
-          - daytona
-        language:
-          type: string
-          example: typescript
-        packages:
+          - public
+          - private
+          - restricted
+        tags:
           type: array
           items:
-            type: object
-            properties:
-              name:
-                type: string
-        resources:
-          type: object
-          properties:
-            timeout:
-              type: integer
+            type: string
     Problem:
       type: object
       description: RFC 9457 Problem Details.
@@ -237,14 +237,14 @@ components:
       schema:
         type: string
   responses:
-    NotFound:
-      description: Not Found — resource does not exist
+    BadRequest:
+      description: Bad Request — invalid input or missing required fields
       content:
         application/problem+json:
           schema:
             $ref: '#/components/schemas/Problem'
-    BadRequest:
-      description: Bad Request — invalid input or missing required fields
+    NotFound:
+      description: Not Found — resource does not exist
       content:
         application/problem+json:
           schema:

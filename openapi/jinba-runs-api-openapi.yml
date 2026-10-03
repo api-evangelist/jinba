@@ -56,21 +56,20 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 components:
-  responses:
-    NotFound:
-      description: Not Found — resource does not exist
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-  parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
+    Problem:
+      type: object
+      description: RFC 9457 Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
     Run:
       type: object
       properties:
@@ -90,19 +89,20 @@ components:
         createdAt:
           type: string
           format: date-time
-    Problem:
-      type: object
-      description: RFC 9457 Problem Details.
-      properties:
-        type:
-          type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
+  responses:
+    NotFound:
+      description: Not Found — resource does not exist
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+  parameters:
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http
