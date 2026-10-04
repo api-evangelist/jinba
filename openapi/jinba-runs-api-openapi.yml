@@ -57,19 +57,6 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   schemas:
-    Problem:
-      type: object
-      description: RFC 9457 Problem Details.
-      properties:
-        type:
-          type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
     Run:
       type: object
       properties:
@@ -89,13 +76,19 @@ components:
         createdAt:
           type: string
           format: date-time
-  responses:
-    NotFound:
-      description: Not Found — resource does not exist
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
+    Problem:
+      type: object
+      description: RFC 9457 Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
   parameters:
     OrgId:
       name: orgId
@@ -103,6 +96,13 @@ components:
       required: true
       schema:
         type: string
+  responses:
+    NotFound:
+      description: Not Found — resource does not exist
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
   securitySchemes:
     bearerAuth:
       type: http

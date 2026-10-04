@@ -98,6 +98,13 @@ paths:
         '204':
           description: Tool deleted
 components:
+  responses:
+    NotFound:
+      description: Not Found — resource does not exist
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
   schemas:
     Tool:
       type: object
@@ -130,14 +137,19 @@ components:
         updatedAt:
           type: string
           format: date-time
-    LocalizedText:
+    Problem:
       type: object
-      description: A localized text object keyed by locale, with a "default" key.
+      description: RFC 9457 Problem Details.
       properties:
-        default:
+        type:
           type: string
-      additionalProperties:
-        type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
     ToolCreate:
       type: object
       required:
@@ -157,25 +169,19 @@ components:
           type: object
         code:
           type: string
-    Problem:
+    LocalizedText:
       type: object
-      description: RFC 9457 Problem Details.
+      description: A localized text object keyed by locale, with a "default" key.
       properties:
-        type:
+        default:
           type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
+      additionalProperties:
+        type: string
   parameters:
-    Slug:
-      name: slug
+    OrgId:
+      name: orgId
       in: path
       required: true
-      description: ToolSet slug
       schema:
         type: string
     ToolSlug:
@@ -185,19 +191,13 @@ components:
       description: Tool slug
       schema:
         type: string
-    OrgId:
-      name: orgId
+    Slug:
+      name: slug
       in: path
       required: true
+      description: ToolSet slug
       schema:
         type: string
-  responses:
-    NotFound:
-      description: Not Found — resource does not exist
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
   securitySchemes:
     bearerAuth:
       type: http

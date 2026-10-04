@@ -104,16 +104,39 @@ paths:
         '403':
           $ref: '#/components/responses/Forbidden'
 components:
+  responses:
+    BadRequest:
+      description: Bad Request — invalid input or missing required fields
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    NotFound:
+      description: Not Found — resource does not exist
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    Unauthorized:
+      description: Unauthorized — missing or invalid API key
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    Forbidden:
+      description: Forbidden — API key lacks permission for this action
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+  parameters:
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
-    OrganizationCreate:
-      type: object
-      required:
-      - name
-      properties:
-        name:
-          type: string
-        slug:
-          type: string
     Problem:
       type: object
       description: RFC 9457 Problem Details.
@@ -126,6 +149,15 @@ components:
         status:
           type: integer
         detail:
+          type: string
+    OrganizationCreate:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          type: string
+        slug:
           type: string
     Organization:
       type: object
@@ -145,38 +177,6 @@ components:
         createdAt:
           type: string
           format: date-time
-  parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
-  responses:
-    Unauthorized:
-      description: Unauthorized — missing or invalid API key
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-    BadRequest:
-      description: Bad Request — invalid input or missing required fields
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-    NotFound:
-      description: Not Found — resource does not exist
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-    Forbidden:
-      description: Forbidden — API key lacks permission for this action
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
   securitySchemes:
     bearerAuth:
       type: http

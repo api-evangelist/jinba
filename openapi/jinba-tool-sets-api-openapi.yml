@@ -112,6 +112,33 @@ paths:
         '204':
           description: ToolSet deleted
 components:
+  responses:
+    BadRequest:
+      description: Bad Request — invalid input or missing required fields
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    NotFound:
+      description: Not Found — resource does not exist
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+  parameters:
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
+    Slug:
+      name: slug
+      in: path
+      required: true
+      description: ToolSet slug
+      schema:
+        type: string
   schemas:
     SandboxConfig:
       type: object
@@ -136,6 +163,43 @@ components:
           properties:
             timeout:
               type: integer
+    Problem:
+      type: object
+      description: RFC 9457 Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+    ToolSetCreate:
+      type: object
+      required:
+      - slug
+      - name
+      properties:
+        slug:
+          type: string
+        name:
+          $ref: '#/components/schemas/LocalizedText'
+        description:
+          $ref: '#/components/schemas/LocalizedText'
+        sandbox:
+          $ref: '#/components/schemas/SandboxConfig'
+        visibility:
+          type: string
+          enum:
+          - public
+          - private
+          - restricted
+        tags:
+          type: array
+          items:
+            type: string
     ToolSet:
       type: object
       properties:
@@ -185,70 +249,6 @@ components:
           type: string
       additionalProperties:
         type: string
-    ToolSetCreate:
-      type: object
-      required:
-      - slug
-      - name
-      properties:
-        slug:
-          type: string
-        name:
-          $ref: '#/components/schemas/LocalizedText'
-        description:
-          $ref: '#/components/schemas/LocalizedText'
-        sandbox:
-          $ref: '#/components/schemas/SandboxConfig'
-        visibility:
-          type: string
-          enum:
-          - public
-          - private
-          - restricted
-        tags:
-          type: array
-          items:
-            type: string
-    Problem:
-      type: object
-      description: RFC 9457 Problem Details.
-      properties:
-        type:
-          type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
-  parameters:
-    Slug:
-      name: slug
-      in: path
-      required: true
-      description: ToolSet slug
-      schema:
-        type: string
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
-  responses:
-    BadRequest:
-      description: Bad Request — invalid input or missing required fields
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
-    NotFound:
-      description: Not Found — resource does not exist
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
   securitySchemes:
     bearerAuth:
       type: http

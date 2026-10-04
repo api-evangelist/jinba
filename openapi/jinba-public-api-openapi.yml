@@ -87,31 +87,19 @@ paths:
               schema:
                 type: object
 components:
+  responses:
+    TooManyRequests:
+      description: Too Many Requests — rate limit exceeded
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+          description: Seconds to wait before retrying
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
   schemas:
-    RunRequest:
-      type: object
-      required:
-      - input
-      properties:
-        input:
-          type: object
-          description: Arguments matching the tool's input schema.
-        version:
-          type: string
-          description: Optional published version to pin for reproducibility.
-    Problem:
-      type: object
-      description: RFC 9457 Problem Details.
-      properties:
-        type:
-          type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
     RunResult:
       type: object
       properties:
@@ -145,18 +133,30 @@ components:
                 type: string
         durationMs:
           type: integer
-  responses:
-    TooManyRequests:
-      description: Too Many Requests — rate limit exceeded
-      headers:
-        Retry-After:
-          schema:
-            type: integer
-          description: Seconds to wait before retrying
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
+    RunRequest:
+      type: object
+      required:
+      - input
+      properties:
+        input:
+          type: object
+          description: Arguments matching the tool's input schema.
+        version:
+          type: string
+          description: Optional published version to pin for reproducibility.
+    Problem:
+      type: object
+      description: RFC 9457 Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
   securitySchemes:
     bearerAuth:
       type: http

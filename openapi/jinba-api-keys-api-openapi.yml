@@ -74,13 +74,6 @@ paths:
         '204':
           description: API key deleted
 components:
-  parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
     ApiKey:
       type: object
@@ -102,6 +95,13 @@ components:
         createdAt:
           type: string
           format: date-time
+  parameters:
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http

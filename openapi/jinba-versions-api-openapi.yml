@@ -102,6 +102,16 @@ paths:
                 $ref: '#/components/schemas/ToolSetVersion'
 components:
   schemas:
+    VersionPublish:
+      type: object
+      required:
+      - version
+      properties:
+        version:
+          type: string
+          example: 1.3.0
+        releaseNotes:
+          type: string
     ToolSetVersion:
       type: object
       properties:
@@ -116,28 +126,18 @@ components:
         createdAt:
           type: string
           format: date-time
-    VersionPublish:
-      type: object
-      required:
-      - version
-      properties:
-        version:
-          type: string
-          example: 1.3.0
-        releaseNotes:
-          type: string
   parameters:
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
     Slug:
       name: slug
       in: path
       required: true
       description: ToolSet slug
-      schema:
-        type: string
-    OrgId:
-      name: orgId
-      in: path
-      required: true
       schema:
         type: string
   securitySchemes:
