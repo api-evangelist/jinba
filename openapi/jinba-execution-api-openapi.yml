@@ -71,12 +71,6 @@ paths:
                 $ref: '#/components/schemas/RunResult'
 components:
   responses:
-    BadRequest:
-      description: Bad Request — invalid input or missing required fields
-      content:
-        application/problem+json:
-          schema:
-            $ref: '#/components/schemas/Problem'
     NotFound:
       description: Not Found — resource does not exist
       content:
@@ -94,52 +88,13 @@ components:
         application/problem+json:
           schema:
             $ref: '#/components/schemas/Problem'
-  parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
-    ToolSlug:
-      name: toolSlug
-      in: path
-      required: true
-      description: Tool slug
-      schema:
-        type: string
-    Slug:
-      name: slug
-      in: path
-      required: true
-      description: ToolSet slug
-      schema:
-        type: string
+    BadRequest:
+      description: Bad Request — invalid input or missing required fields
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
   schemas:
-    RunRequest:
-      type: object
-      required:
-      - input
-      properties:
-        input:
-          type: object
-          description: Arguments matching the tool's input schema.
-        version:
-          type: string
-          description: Optional published version to pin for reproducibility.
-    Problem:
-      type: object
-      description: RFC 9457 Problem Details.
-      properties:
-        type:
-          type: string
-          format: uri
-        title:
-          type: string
-        status:
-          type: integer
-        detail:
-          type: string
     RunResult:
       type: object
       properties:
@@ -173,6 +128,51 @@ components:
                 type: string
         durationMs:
           type: integer
+    RunRequest:
+      type: object
+      required:
+      - input
+      properties:
+        input:
+          type: object
+          description: Arguments matching the tool's input schema.
+        version:
+          type: string
+          description: Optional published version to pin for reproducibility.
+    Problem:
+      type: object
+      description: RFC 9457 Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+  parameters:
+    Slug:
+      name: slug
+      in: path
+      required: true
+      description: ToolSet slug
+      schema:
+        type: string
+    ToolSlug:
+      name: toolSlug
+      in: path
+      required: true
+      description: Tool slug
+      schema:
+        type: string
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http

@@ -127,17 +127,17 @@ components:
           type: string
           format: date-time
   parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
     Slug:
       name: slug
       in: path
       required: true
       description: ToolSet slug
+      schema:
+        type: string
+    OrgId:
+      name: orgId
+      in: path
+      required: true
       schema:
         type: string
   securitySchemes:

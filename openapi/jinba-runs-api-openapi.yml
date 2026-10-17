@@ -89,13 +89,6 @@ components:
           type: integer
         detail:
           type: string
-  parameters:
-    OrgId:
-      name: orgId
-      in: path
-      required: true
-      schema:
-        type: string
   responses:
     NotFound:
       description: Not Found — resource does not exist
@@ -103,6 +96,13 @@ components:
         application/problem+json:
           schema:
             $ref: '#/components/schemas/Problem'
+  parameters:
+    OrgId:
+      name: orgId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http
