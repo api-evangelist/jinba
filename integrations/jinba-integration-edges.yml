@@ -1,0 +1,16 @@
+generated: '2026-10-20'
+method: none
+source:
+- https://zapier.com/apps/jinba/integrations
+- https://n8n.io/integrations/jinba/
+- https://composio.dev/toolkits/jinba
+- https://monid.ai/tools/jinba
+checked:
+- https://composio.dev/toolkits/jinba
+- https://monid.ai/tools/jinba
+- https://n8n.io/integrations/jinba/
+- https://zapier.com/apps/jinba/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
