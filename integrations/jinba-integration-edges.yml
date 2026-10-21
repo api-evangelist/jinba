@@ -1,5 +1,5 @@
 generated: '2026-10-20'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/jinba/integrations
 - https://n8n.io/integrations/jinba/
@@ -10,7 +10,40 @@ checked:
 - https://monid.ai/tools/jinba
 - https://n8n.io/integrations/jinba/
 - https://zapier.com/apps/jinba/integrations
+- https://500.co/api/startups
+- https://500.co/companies
+- https://www.antler.co/portfolio
+- https://www.techstars.com/portfolio
+- https://www.ycombinator.com/companies
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Y Combinator
+  partner: y-combinator
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.ycombinator.com/companies/jinba
+  category: accelerator portfolio participation
+  contract_reference:
+    register: Y Combinator company directory (ycombinator.com/companies/<slug>)
+    standard: null
+    spec_file: null
+    role: accelerator-portfolio-company
+    registered_name: Jinba
+    register_id: https://www.ycombinator.com/companies/jinba
+    register_country: null
+    register_website: https://jinba.io
+    matched_domain: jinba.io
+    matched_by: domain
+    signal_note: 'participation only: the accelerator''s own portfolio register lists the company (cohort / investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-accelerator-portfolios.py
+    detected: '2026-10-21'
+    batch: Winter 2026
+    status: Active
+  detected_by: sweep-accelerator-portfolios.py
+  first_seen: '2026-10-21'
 templates: []
